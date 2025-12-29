@@ -406,6 +406,28 @@
       "created_at": "2025-12-29T12:57:54.309003264+01:00",
       "updated_at": "2025-12-29T12:57:54.309003264+01:00",
       "metadata_json": "{\"branch\":\"main\",\"confidence\":95}"
+    },
+    {
+      "id": 38,
+      "change_id": "832562bf-6e8f-4aba-bd84-be60fed776d6",
+      "node_type": "action",
+      "title": "Set up public decision graph viewer for private repository",
+      "description": null,
+      "status": "pending",
+      "created_at": "2025-12-29T14:22:51.481188796+01:00",
+      "updated_at": "2025-12-29T14:22:51.481188796+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":90,\"prompt\":\"User requested: change live graph from default URL to their GitHub Pages\"}"
+    },
+    {
+      "id": 39,
+      "change_id": "42e46898-bfb5-45ac-bf4d-cbb178608d74",
+      "node_type": "outcome",
+      "title": "Public graph viewer deployed at kkrzeminski.github.io/ndr-decision-graph",
+      "description": null,
+      "status": "pending",
+      "created_at": "2025-12-29T14:22:54.127004471+01:00",
+      "updated_at": "2025-12-29T14:22:54.127004471+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":95}"
     }
   ],
   "edges": [
@@ -760,6 +782,28 @@
       "weight": 1.0,
       "rationale": "Fixed 15 LocalDateTime.now() and 8 String.format() violations",
       "created_at": "2025-12-29T12:57:58.517204844+01:00"
+    },
+    {
+      "id": 33,
+      "from_node_id": 37,
+      "to_node_id": 38,
+      "from_change_id": "f1f938f4-aae5-47bf-a373-2491bc93e435",
+      "to_change_id": "832562bf-6e8f-4aba-bd84-be60fed776d6",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Infrastructure improvement after main development work",
+      "created_at": "2025-12-29T14:23:03.840959714+01:00"
+    },
+    {
+      "id": 34,
+      "from_node_id": 38,
+      "to_node_id": 39,
+      "from_change_id": "832562bf-6e8f-4aba-bd84-be60fed776d6",
+      "to_change_id": "42e46898-bfb5-45ac-bf4d-cbb178608d74",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Created public repo, enabled Pages, wrote sync script",
+      "created_at": "2025-12-29T14:23:05.608854676+01:00"
     }
   ]
 }
