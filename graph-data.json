@@ -1627,6 +1627,83 @@
       "created_at": "2026-01-02T14:04:24.434696342+01:00",
       "updated_at": "2026-01-02T14:04:52.493477781+01:00",
       "metadata_json": "{\"branch\":\"main\",\"prompt\":\"Implemented multiple tab summaries feature per prompts/026:\\n\\nDatabase:\\n- Added summary_id column to tab_remarks table\\n- Unique constraint: (project_id, screen_id, tab_id, summary_id)\\n- Migration handles existing data with default summary_id\\n\\nModels:\\n- Created SummaryConfig class with summaryId, label, rows (1-50), maxLength\\n- Extended ScreenTab with summaries field\\n- TabRemarks entity updated with summaryId field\\n\\nDTOs:\\n- TabSummaryDTO - single summary with config and content\\n- TabSummariesResponse - collection of summaries for a tab\\n\\nRepository:\\n- findByProjectAndScreenIdAndTabIdAndSummaryId() - specific summary\\n- findByProjectAndScreenIdAndTabIdOrderByCreatedAt() - all summaries\\n- deleteByProjectAndScreenIdAndTabIdAndSummaryId() - delete summary\\n- Deprecated legacy method for backwards compatibility\\n\\nService:\\n- getAllSummaries() - retrieves all configured summaries\\n- getSummary() - retrieves specific summary\\n- updateSummary() - validates and updates content\\n- deleteSummary() - removes summary data\\n- Validates against template configuration\\n\\nController:\\n- TabSummariesController with 4 REST endpoints\\n- GET /summaries - all summaries\\n- GET /summaries/{summaryId} - specific summary\\n- PUT /summaries/{summaryId} - update summary\\n- DELETE /summaries/{summaryId} - delete summary\\n- Full OpenAPI documentation\\n\\nCommits: 57302c8 (part 1), 533b5b2 (part 2)\"}"
+    },
+    {
+      "id": 149,
+      "change_id": "96c325a6-4eaa-4416-b983-109554bcbfdd",
+      "node_type": "configuration",
+      "title": "Docker timezone set to Europe/Warsaw",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-02T14:17:30.723671920+01:00",
+      "updated_at": "2026-01-02T14:17:40.086216130+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"prompt\":\"Configured TZ=Europe/Warsaw for all Docker services in docker-compose.yml:\\n- postgres (main database)\\n- backend (Spring Boot app)\\n- sonarqube-db (SonarQube database)\\n- sonarqube (SonarQube server)\\n\\nEnsures consistent timezone handling across all containers:\\n- Database timestamps in Warsaw time\\n- Application logs show local time\\n- SonarQube reports display Warsaw time\\n\\nCommit: acd3687\"}"
+    },
+    {
+      "id": 150,
+      "change_id": "ce239f59-c032-4325-9035-132d3df5a201",
+      "node_type": "specification",
+      "title": "Information requests specification - screen-scoped design",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-02T17:14:48.353320874+01:00",
+      "updated_at": "2026-01-02T17:15:00.244620650+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"prompt\":\"Extended prompts/024-information-requests-to-external-coworkers.md to make information requests screen-scoped:\\n\\nKey Design Decisions:\\n- InformationRequest entity requires screenId attribute (VARCHAR 50, NOT NULL)\\n- Each request belongs to a specific screen within a project\\n- API endpoints scoped to /projects/{projectId}/screens/{screenId}/information-requests\\n- Added project-level endpoint for cross-screen listing\\n\\nDatabase Design:\\n- screen_id column added to information_requests table\\n- Composite index on (project_id, screen_id) for efficient filtering\\n- Screen validation: must exist in project template\\n\\nAPI Changes:\\n- All CRUD operations scoped by screen\\n- Bulk reminder endpoint per screen\\n- Cross-screen listing at project level with optional screenId filter\\n\\nValidation:\\n- New InvalidScreenIdException for invalid screen references\\n- TemplateService integration to validate screenId exists\\n\\nBenefits:\\n- Organizes document requests by screen context\\n- Aligns with existing screen-based project structure\\n- Better filtering and query performance\\n- Clear organizational hierarchy\\n\\nCommit: 520e373\"}"
+    },
+    {
+      "id": 151,
+      "change_id": "33e530fe-1059-46a0-bb08-84946e2375a7",
+      "node_type": "specification",
+      "title": "Row groups expansion - comprehensive specification",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-02T18:57:14.961984028+01:00",
+      "updated_at": "2026-01-02T18:57:29.148321544+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"prompt\":\"Created comprehensive specification for row groups expansion feature (prompts/027):\\n\\nOriginal: 86 lines with basic example\\nRefined: 612 lines with complete implementation guide\\n\\nKey Design Decisions:\\n- On-the-fly expansion (computed when fetching tab data, not stored)\\n- Data source: Project.workers relationship\\n- Preserve groupStart/groupEnd markers after expansion\\n- Support WORKERS, EXTERNAL_COWORKERS, custom lists\\n- Store cell data with expanded rowId (e.g., 'row-2-1', 'row-2-2')\\n- Empty source = skip entire group\\n- groupLabel only on first row per worker/coworker\\n\\nPlaceholder System:\\n- WORKERS: All User entity fields ({worker.id}, {worker.firstName}, etc.)\\n- EXTERNAL_COWORKERS: id, name, email, phone\\n- Allowed in: rowId, groupLabel, label, column labels/defaultValue/options\\n- Forbidden in: columnId, groupStart/groupEnd, column type\\n- Missing fields → empty string\\n\\nSpecification Includes:\\n- Overview and use cases\\n- Group sources documentation\\n- Template structure and syntax\\n- Placeholder resolution rules\\n- 5-step expansion algorithm\\n- Complete examples (workers + external coworkers)\\n- Data storage strategy\\n- API changes\\n- Implementation requirements (RowExpansionService, GroupSource enum, Row model)\\n- Validation rules\\n- Error handling (4 custom exceptions)\\n- Testing requirements\\n- Performance analysis (O(n×m))\\n- Migration path (non-breaking)\\n- Future enhancements\\n\\nUser answered 12 clarifying questions to ensure spec accuracy.\\n\\nCommit: 2e608f0\"}"
+    },
+    {
+      "id": 152,
+      "change_id": "6007f5c9-e78f-47f8-9382-61fa0d45e5ea",
+      "node_type": "implementation",
+      "title": "Row groups expansion - dynamic row generation",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-02T19:19:33.340371302+01:00",
+      "updated_at": "2026-01-02T19:19:50.777348408+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"prompt\":\"Implemented complete row groups expansion feature (prompts/027):\\n\\nComponents Created:\\n- GroupSource enum (WORKERS, EXTERNAL_COWORKERS)\\n- Row model updates (groupStart, groupEnd, groupSource fields)\\n- RowExpansionService (350+ lines, 10 methods)\\n- 4 custom exceptions for validation\\n- Integration with ProjectScreenService.getRows()\\n\\nKey Features:\\n- On-the-fly expansion when fetching tab data\\n- Placeholder resolution using {worker.field} or {coworker.field}\\n- Validation: detects malformed groups, nested groups\\n- WORKERS source: ScreenUser entities → User fields\\n- EXTERNAL_COWORKERS source: ProjectExternalCoworker entities\\n- Empty source = skip entire group\\n- Each expanded row has unique rowId and can store cell data\\n- groupLabel only on first row per worker/coworker\\n\\nTechnical Highlights:\\n- Uses Jackson ObjectMapper for field access (avoids reflection restrictions)\\n- Deep row cloning with placeholder replacement\\n- Regex pattern matching for placeholders\\n- Comprehensive group structure validation\\n- Integrated into existing row fetching pipeline\\n\\nValidation Rules:\\n- Every groupStart must have matching groupEnd\\n- No nested groups allowed\\n- groupSource required when groupStart present\\n- rowId in grouped rows should contain placeholder\\n\\nBehavior:\\n- Template: 5 rows + 3 workers → Expanded: 13 rows\\n- Non-breaking: templates without groups work unchanged\\n- Performance: O(n×m), negligible for typical use cases\\n\\nUser answered 12 clarifying questions during specification refinement.\\n\\nFiles: 8 files, 514 insertions\\nCommit: c4968b3\"}"
+    },
+    {
+      "id": 153,
+      "change_id": "0862da90-209c-4cb1-b129-4754045266fc",
+      "node_type": "bugfix",
+      "title": "WORKERS source now uses ProjectWorker (project-level) instead of ScreenUser",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-02T19:26:00.282811763+01:00",
+      "updated_at": "2026-01-02T19:26:11.427860724+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"prompt\":\"Fixed WORKERS group source to use project-level workers:\\n\\nChanged From:\\n- ScreenUserRepository.findByProjectIdAndScreenId(projectId, screenId)\\n- Screen-specific worker assignments\\n- Required screenId parameter\\n\\nChanged To:\\n- ProjectWorkerRepository.findByProjectId(projectId)\\n- Project-level worker assignments\\n- No screenId parameter needed\\n\\nRationale:\\n- WORKERS should represent all project workers, not screen-specific\\n- Aligns with ProjectWorker entity design (project-level with roles)\\n- Consistent with EXTERNAL_COWORKERS (also project-level)\\n- Simpler API - no screenId needed for project-level data\\n\\nImpact:\\n- Row groups expand for ALL project workers\\n- More intuitive behavior for most use cases\\n- Specification updated to reflect ProjectWorker source\\n\\nFiles Changed:\\n- RowExpansionService.java (repository, method signatures)\\n- ProjectScreenService.java (removed screenId argument)\\n- prompts/027-row-groups-expansion.md (updated documentation)\\n\\nCommit: c627f68\"}"
+    },
+    {
+      "id": 154,
+      "change_id": "4eafe73d-090c-4fdf-b6dc-39b7b6ea4df8",
+      "node_type": "Fix lazy loading in row expansion placeholder resolution",
+      "title": "Replaced JSON serialization with explicit getter calls to prevent JPA lazy loading. Created getUserFieldValue() and getExternalCoworkerFieldValue() with switch statements for type-safe field access. This avoids N+1 query problems when resolving placeholders in expanded rows.",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-02T19:34:06.769911247+01:00",
+      "updated_at": "2026-01-02T19:34:06.769911247+01:00",
+      "metadata_json": "{\"branch\":\"main\"}"
+    },
+    {
+      "id": 155,
+      "change_id": "9c714997-036e-460b-8d76-44d9db84d111",
+      "node_type": "Add comprehensive unit tests for RowExpansionService",
+      "title": "Created RowExpansionServiceTest with 13 test cases covering validation, expansion, placeholder resolution, and edge cases. Uses JUnit 5, Mockito, and AssertJ. Tests null/empty handling, group validation errors, WORKERS/EXTERNAL_COWORKERS expansion, and multiple group scenarios. All tests passing.",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-02T19:41:14.491917045+01:00",
+      "updated_at": "2026-01-02T19:41:14.491917045+01:00",
+      "metadata_json": "{\"branch\":\"main\"}"
     }
   ],
   "edges": [
@@ -2971,6 +3048,28 @@
       "weight": 1.0,
       "rationale": "Initial implementation components completed",
       "created_at": "2026-01-02T13:57:55.154304069+01:00"
+    },
+    {
+      "id": 123,
+      "from_node_id": 153,
+      "to_node_id": 154,
+      "from_change_id": "0862da90-209c-4cb1-b129-4754045266fc",
+      "to_change_id": "4eafe73d-090c-4fdf-b6dc-39b7b6ea4df8",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": null,
+      "created_at": "2026-01-02T19:34:11.093168320+01:00"
+    },
+    {
+      "id": 124,
+      "from_node_id": 154,
+      "to_node_id": 155,
+      "from_change_id": "4eafe73d-090c-4fdf-b6dc-39b7b6ea4df8",
+      "to_change_id": "9c714997-036e-460b-8d76-44d9db84d111",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": null,
+      "created_at": "2026-01-02T19:41:21.407637825+01:00"
     }
   ]
 }
