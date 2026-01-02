@@ -1451,6 +1451,182 @@
       "created_at": "2025-12-31T23:16:40.585266406+01:00",
       "updated_at": "2025-12-31T23:16:40.585266406+01:00",
       "metadata_json": "{\"branch\":\"main\",\"confidence\":90}"
+    },
+    {
+      "id": 133,
+      "change_id": "8d86dc28-04a4-43eb-aa36-c80eba40be94",
+      "node_type": "action",
+      "title": "Documenting SonarQube setup and usage in DEVELOPMENT.md",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-01T14:24:27.071634923+01:00",
+      "updated_at": "2026-01-01T14:24:27.071634923+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":90}"
+    },
+    {
+      "id": 134,
+      "change_id": "45063e09-1ed8-430a-aaad-5e06d8ae444c",
+      "node_type": "outcome",
+      "title": "SonarQube documentation complete - comprehensive setup guide added to DEVELOPMENT.md",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-01T14:25:16.031808397+01:00",
+      "updated_at": "2026-01-01T14:25:16.031808397+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":95}"
+    },
+    {
+      "id": 135,
+      "change_id": "61eb5798-cb43-43e9-8b32-4967b560b0be",
+      "node_type": "goal",
+      "title": "Fix foreign key type mismatch in information_requests table",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-02T11:52:34.884801382+01:00",
+      "updated_at": "2026-01-02T11:52:34.884801382+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":90,\"prompt\":\"User reported: 'Caused by: org.postgresql.util.PSQLException: ERROR: foreign key constraint \\\"fk_information_requests_created_by\\\" cannot be implemented', users.id is not uuid\"}"
+    },
+    {
+      "id": 136,
+      "change_id": "354eb492-ded3-428b-903f-5e2c00035e8e",
+      "node_type": "action",
+      "title": "Fixing created_by column type from UUID to BIGINT in all information_requests tables",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-02T11:52:54.989960236+01:00",
+      "updated_at": "2026-01-02T11:52:54.989960236+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":90}"
+    },
+    {
+      "id": 137,
+      "change_id": "8340b2e7-420d-4a64-88f2-5e6b655fc37d",
+      "node_type": "outcome",
+      "title": "Foreign key type mismatches fixed - all migrations passing successfully",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-02T11:57:27.457382884+01:00",
+      "updated_at": "2026-01-02T11:57:27.457382884+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":95}"
+    },
+    {
+      "id": 138,
+      "change_id": "022be3e8-3b07-4f8a-81c4-122f2038a203",
+      "node_type": "observation",
+      "title": "Fixed 3 FK type mismatches: information_requests.created_by (UUID→BIGINT), request_comments.employee_id (UUID→BIGINT), request_recipients.external_coworker_id (UUID→BIGINT + table name fix)",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-02T11:57:34.250697720+01:00",
+      "updated_at": "2026-01-02T11:57:34.250697720+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":95}"
+    },
+    {
+      "id": 139,
+      "change_id": "767dae48-0eb7-4f38-b185-6dbdff9b8ac6",
+      "node_type": "goal",
+      "title": "Refine prompts/026-multiple-screen-summaries.md specification",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-02T13:27:48.234964757+01:00",
+      "updated_at": "2026-01-02T13:27:48.234964757+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":90,\"prompt\":\"User asked: Please refine prompts/026-multiple-screen-summaries.md\"}"
+    },
+    {
+      "id": 140,
+      "change_id": "8ad1afc2-f85f-4e5e-b512-9837a8bcddda",
+      "node_type": "action",
+      "title": "Analyzing current tab remarks implementation and designing multiple summaries extension",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-02T13:28:25.494889145+01:00",
+      "updated_at": "2026-01-02T13:28:25.494889145+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":85}"
+    },
+    {
+      "id": 141,
+      "change_id": "7cbe94ba-4f2b-4692-9fb1-69e1d073484f",
+      "node_type": "outcome",
+      "title": "Comprehensive specification created for multiple tab summaries feature",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-02T13:30:08.312967562+01:00",
+      "updated_at": "2026-01-02T13:30:08.312967562+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":95}"
+    },
+    {
+      "id": 142,
+      "change_id": "9b296fd1-6a01-4eff-9faf-539e571667b1",
+      "node_type": "observation",
+      "title": "Specification includes: 612 lines, multiple summary blocks with summaryId, configurable textarea height (rows), database migration strategy, backwards compatibility with existing remarks, complete API design, DTOs, and implementation checklist",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-02T13:30:17.609883139+01:00",
+      "updated_at": "2026-01-02T13:30:17.609883139+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":95}"
+    },
+    {
+      "id": 143,
+      "change_id": "2e11b6cb-b928-4ae6-998e-ac62d73e8edc",
+      "node_type": "action",
+      "title": "Removing backwards compatibility for unused remarks field from specification",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-02T13:35:14.409231195+01:00",
+      "updated_at": "2026-01-02T13:35:14.409231195+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":90}"
+    },
+    {
+      "id": 144,
+      "change_id": "abc527c0-589b-48b1-becd-787b825c7501",
+      "node_type": "outcome",
+      "title": "Backwards compatibility removed - specification simplified to 585 lines",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-02T13:36:22.426292653+01:00",
+      "updated_at": "2026-01-02T13:36:22.426292653+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":95}"
+    },
+    {
+      "id": 145,
+      "change_id": "73d47cb2-2eb8-49ce-9e32-0e35353ce357",
+      "node_type": "goal",
+      "title": "Implement multiple tab summaries feature (prompt 026)",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-02T13:54:19.510370841+01:00",
+      "updated_at": "2026-01-02T13:54:19.510370841+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":90,\"prompt\":\"User asked: Please implement it (referring to prompt 026 specification)\"}"
+    },
+    {
+      "id": 146,
+      "change_id": "8c76ecf4-e61e-4d2f-bcb9-9cc4a6e88e61",
+      "node_type": "action",
+      "title": "Creating Liquibase migration for summary_id column",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-02T13:54:26.792976374+01:00",
+      "updated_at": "2026-01-02T13:54:26.792976374+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":90}"
+    },
+    {
+      "id": 147,
+      "change_id": "d484da0d-3293-4bbf-9f4f-692293b2c3b5",
+      "node_type": "outcome",
+      "title": "Database migration, entity, models, DTOs, and repository updated for multiple summaries",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-02T13:57:54.952691587+01:00",
+      "updated_at": "2026-01-02T13:57:54.952691587+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":90}"
+    },
+    {
+      "id": 148,
+      "change_id": "9eb31f34-a449-428b-8ae8-d12b7e1a71ff",
+      "node_type": "implementation",
+      "title": "Multiple tab summaries support - complete feature implementation",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-02T14:04:24.434696342+01:00",
+      "updated_at": "2026-01-02T14:04:52.493477781+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"prompt\":\"Implemented multiple tab summaries feature per prompts/026:\\n\\nDatabase:\\n- Added summary_id column to tab_remarks table\\n- Unique constraint: (project_id, screen_id, tab_id, summary_id)\\n- Migration handles existing data with default summary_id\\n\\nModels:\\n- Created SummaryConfig class with summaryId, label, rows (1-50), maxLength\\n- Extended ScreenTab with summaries field\\n- TabRemarks entity updated with summaryId field\\n\\nDTOs:\\n- TabSummaryDTO - single summary with config and content\\n- TabSummariesResponse - collection of summaries for a tab\\n\\nRepository:\\n- findByProjectAndScreenIdAndTabIdAndSummaryId() - specific summary\\n- findByProjectAndScreenIdAndTabIdOrderByCreatedAt() - all summaries\\n- deleteByProjectAndScreenIdAndTabIdAndSummaryId() - delete summary\\n- Deprecated legacy method for backwards compatibility\\n\\nService:\\n- getAllSummaries() - retrieves all configured summaries\\n- getSummary() - retrieves specific summary\\n- updateSummary() - validates and updates content\\n- deleteSummary() - removes summary data\\n- Validates against template configuration\\n\\nController:\\n- TabSummariesController with 4 REST endpoints\\n- GET /summaries - all summaries\\n- GET /summaries/{summaryId} - specific summary\\n- PUT /summaries/{summaryId} - update summary\\n- DELETE /summaries/{summaryId} - delete summary\\n- Full OpenAPI documentation\\n\\nCommits: 57302c8 (part 1), 533b5b2 (part 2)\"}"
     }
   ],
   "edges": [
@@ -2641,6 +2817,160 @@
       "weight": 1.0,
       "rationale": "Configuration completed and verified",
       "created_at": "2025-12-31T23:06:25.466878282+01:00"
+    },
+    {
+      "id": 109,
+      "from_node_id": 132,
+      "to_node_id": 133,
+      "from_change_id": "347fa32c-6be9-4733-a968-e1107a154c76",
+      "to_change_id": "8d86dc28-04a4-43eb-aa36-c80eba40be94",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Continuing SonarQube setup with documentation",
+      "created_at": "2026-01-01T14:24:45.885654385+01:00"
+    },
+    {
+      "id": 110,
+      "from_node_id": 133,
+      "to_node_id": 134,
+      "from_change_id": "8d86dc28-04a4-43eb-aa36-c80eba40be94",
+      "to_change_id": "45063e09-1ed8-430a-aaad-5e06d8ae444c",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Documentation completed successfully",
+      "created_at": "2026-01-01T14:25:16.157288557+01:00"
+    },
+    {
+      "id": 111,
+      "from_node_id": 131,
+      "to_node_id": 133,
+      "from_change_id": "3fc5837c-3d96-4ea4-9e44-714a26b3b5b4",
+      "to_change_id": "8d86dc28-04a4-43eb-aa36-c80eba40be94",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Documentation is part of the SonarQube setup goal",
+      "created_at": "2026-01-01T14:25:31.137244049+01:00"
+    },
+    {
+      "id": 112,
+      "from_node_id": 135,
+      "to_node_id": 136,
+      "from_change_id": "61eb5798-cb43-43e9-8b32-4967b560b0be",
+      "to_change_id": "354eb492-ded3-428b-903f-5e2c00035e8e",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Starting to fix the type mismatch",
+      "created_at": "2026-01-02T11:53:04.424966182+01:00"
+    },
+    {
+      "id": 113,
+      "from_node_id": 136,
+      "to_node_id": 137,
+      "from_change_id": "354eb492-ded3-428b-903f-5e2c00035e8e",
+      "to_change_id": "8340b2e7-420d-4a64-88f2-5e6b655fc37d",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Fixes applied and tested successfully",
+      "created_at": "2026-01-02T11:57:27.586501056+01:00"
+    },
+    {
+      "id": 114,
+      "from_node_id": 137,
+      "to_node_id": 138,
+      "from_change_id": "8340b2e7-420d-4a64-88f2-5e6b655fc37d",
+      "to_change_id": "022be3e8-3b07-4f8a-81c4-122f2038a203",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Details of the fixes applied",
+      "created_at": "2026-01-02T11:57:34.388507191+01:00"
+    },
+    {
+      "id": 115,
+      "from_node_id": 139,
+      "to_node_id": 140,
+      "from_change_id": "767dae48-0eb7-4f38-b185-6dbdff9b8ac6",
+      "to_change_id": "8ad1afc2-f85f-4e5e-b512-9837a8bcddda",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Starting analysis and design work",
+      "created_at": "2026-01-02T13:29:55.977561125+01:00"
+    },
+    {
+      "id": 116,
+      "from_node_id": 140,
+      "to_node_id": 141,
+      "from_change_id": "8ad1afc2-f85f-4e5e-b512-9837a8bcddda",
+      "to_change_id": "7cbe94ba-4f2b-4692-9fb1-69e1d073484f",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Specification completed successfully",
+      "created_at": "2026-01-02T13:30:08.451299369+01:00"
+    },
+    {
+      "id": 117,
+      "from_node_id": 141,
+      "to_node_id": 142,
+      "from_change_id": "7cbe94ba-4f2b-4692-9fb1-69e1d073484f",
+      "to_change_id": "9b296fd1-6a01-4eff-9faf-539e571667b1",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Key features documented",
+      "created_at": "2026-01-02T13:30:17.754844525+01:00"
+    },
+    {
+      "id": 118,
+      "from_node_id": 142,
+      "to_node_id": 143,
+      "from_change_id": "9b296fd1-6a01-4eff-9faf-539e571667b1",
+      "to_change_id": "2e11b6cb-b928-4ae6-998e-ac62d73e8edc",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "User clarified remarks field was unused",
+      "created_at": "2026-01-02T13:35:14.572494264+01:00"
+    },
+    {
+      "id": 119,
+      "from_node_id": 143,
+      "to_node_id": 144,
+      "from_change_id": "2e11b6cb-b928-4ae6-998e-ac62d73e8edc",
+      "to_change_id": "abc527c0-589b-48b1-becd-787b825c7501",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Backwards compatibility sections removed successfully",
+      "created_at": "2026-01-02T13:36:22.612382149+01:00"
+    },
+    {
+      "id": 120,
+      "from_node_id": 144,
+      "to_node_id": 145,
+      "from_change_id": "abc527c0-589b-48b1-becd-787b825c7501",
+      "to_change_id": "73d47cb2-2eb8-49ce-9e32-0e35353ce357",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Starting implementation",
+      "created_at": "2026-01-02T13:54:19.791472909+01:00"
+    },
+    {
+      "id": 121,
+      "from_node_id": 145,
+      "to_node_id": 146,
+      "from_change_id": "73d47cb2-2eb8-49ce-9e32-0e35353ce357",
+      "to_change_id": "8c76ecf4-e61e-4d2f-bcb9-9cc4a6e88e61",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Starting with database migration",
+      "created_at": "2026-01-02T13:54:26.967618816+01:00"
+    },
+    {
+      "id": 122,
+      "from_node_id": 146,
+      "to_node_id": 147,
+      "from_change_id": "8c76ecf4-e61e-4d2f-bcb9-9cc4a6e88e61",
+      "to_change_id": "d484da0d-3293-4bbf-9f4f-692293b2c3b5",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Initial implementation components completed",
+      "created_at": "2026-01-02T13:57:55.154304069+01:00"
     }
   ]
 }
