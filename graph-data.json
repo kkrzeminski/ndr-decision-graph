@@ -1704,6 +1704,149 @@
       "created_at": "2026-01-02T19:41:14.491917045+01:00",
       "updated_at": "2026-01-02T19:41:14.491917045+01:00",
       "metadata_json": "{\"branch\":\"main\"}"
+    },
+    {
+      "id": 156,
+      "change_id": "9fd39a08-02d7-4e93-aa1a-29f47e298b1d",
+      "node_type": "goal",
+      "title": "Debug screen not found error for screenId 'ii.2.1'",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-03T13:39:52.441605938+01:00",
+      "updated_at": "2026-01-03T13:39:52.441605938+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":90,\"prompt\":\"User reported: POST to /api/projects/{projectId}/screens/ii.2.1/tabs/0/summaries returns 404 Screen Not Found\"}"
+    },
+    {
+      "id": 157,
+      "change_id": "7d8e59cd-e3fa-4de3-8680-1a48b0a07a94",
+      "node_type": "action",
+      "title": "Investigating screen lookup logic and URL path variable handling",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-03T13:39:52.584067543+01:00",
+      "updated_at": "2026-01-03T13:39:52.584067543+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":85}"
+    },
+    {
+      "id": 158,
+      "change_id": "a93b35de-331c-4550-b8f3-edc825e7123c",
+      "node_type": "observation",
+      "title": "Root cause identified: Spring path variable truncation",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-03T13:40:31.547676868+01:00",
+      "updated_at": "2026-01-03T13:40:31.547676868+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":95}"
+    },
+    {
+      "id": 159,
+      "change_id": "660cf71a-2e6c-4c0b-b713-d91d5a00e872",
+      "node_type": "action",
+      "title": "Fixing screenId path variable pattern in all controllers to handle dots",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-03T13:40:39.052538619+01:00",
+      "updated_at": "2026-01-03T13:40:39.052538619+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":90}"
+    },
+    {
+      "id": 160,
+      "change_id": "2cc4fe99-d596-4055-8110-7df1bac83a10",
+      "node_type": "outcome",
+      "title": "All controllers fixed - screenId path variable now handles dots correctly",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-03T13:42:19.178707579+01:00",
+      "updated_at": "2026-01-03T13:42:19.178707579+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":95}"
+    },
+    {
+      "id": 161,
+      "change_id": "ffa113fe-39a8-47c7-9a76-f20bf220e432",
+      "node_type": "observation",
+      "title": "Fixed 8 controllers: TabSummariesController, TabRemarksController, RowCommentController, RowStatusController, ScreenAggregateController, FileAttachmentController, ProgressController (4 methods), ScreenUserController (2 methods). All {screenId} changed to {screenId:.+} to prevent Spring truncation at dots.",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-03T13:42:27.238104365+01:00",
+      "updated_at": "2026-01-03T13:42:27.238104365+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":95}"
+    },
+    {
+      "id": 162,
+      "change_id": "de30e1f2-821b-470c-9ca5-121db2a20f25",
+      "node_type": "outcome",
+      "title": "Committed fix for screen ID path variable handling",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-03T13:44:43.058554764+01:00",
+      "updated_at": "2026-01-03T13:44:43.058554764+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":95}"
+    },
+    {
+      "id": 163,
+      "change_id": "6ee236f5-9734-4a32-9673-e93e3e478b77",
+      "node_type": "goal",
+      "title": "Investigate why screen 'ii.2.1' not found in template",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-03T13:49:45.308688858+01:00",
+      "updated_at": "2026-01-03T13:49:45.308688858+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":90,\"prompt\":\"User reports: ScreenNotFoundException at TabRemarksService.getTabFromTemplate line 744 - screen ID now passes correctly but not found in template\"}"
+    },
+    {
+      "id": 164,
+      "change_id": "f2360997-4a02-4c39-994e-5298ec80606a",
+      "node_type": "action",
+      "title": "Checking template lookup logic and screen ID formats",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-03T13:49:45.456444406+01:00",
+      "updated_at": "2026-01-03T13:49:45.456444406+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":85}"
+    },
+    {
+      "id": 165,
+      "change_id": "e1b91c49-b210-43ac-92d4-f864523320fe",
+      "node_type": "observation",
+      "title": "Root cause: findSectionByIdRecursive doesn't search 'content' arrays",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-03T13:50:42.537313459+01:00",
+      "updated_at": "2026-01-03T13:50:42.537313459+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":95}"
+    },
+    {
+      "id": 166,
+      "change_id": "69fd65a7-1d5b-4a42-b1d7-248f265d7553",
+      "node_type": "action",
+      "title": "Adding content array support to findSectionByIdRecursive",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-03T13:50:42.871499732+01:00",
+      "updated_at": "2026-01-03T13:50:42.871499732+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":90}"
+    },
+    {
+      "id": 167,
+      "change_id": "fc3e7e7e-be13-4a46-8667-eaf9fd9412bc",
+      "node_type": "outcome",
+      "title": "Fixed template search to handle content arrays",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-03T13:51:10.359639434+01:00",
+      "updated_at": "2026-01-03T13:51:10.359639434+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":95}"
+    },
+    {
+      "id": 168,
+      "change_id": "49e59c51-6300-4aeb-91e8-ef7103b13db9",
+      "node_type": "observation",
+      "title": "Template structure uses 'content' arrays for nested screens (e.g., ii.1.1, ii.2.1), not 'subsections'. Previous code only searched 'sections' and 'subsections', missing all nested screens.",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-03T13:51:10.716704082+01:00",
+      "updated_at": "2026-01-03T13:51:10.716704082+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":95}"
     }
   ],
   "edges": [
@@ -3070,6 +3213,127 @@
       "weight": 1.0,
       "rationale": null,
       "created_at": "2026-01-02T19:41:21.407637825+01:00"
+    },
+    {
+      "id": 125,
+      "from_node_id": 156,
+      "to_node_id": 157,
+      "from_change_id": "9fd39a08-02d7-4e93-aa1a-29f47e298b1d",
+      "to_change_id": "7d8e59cd-e3fa-4de3-8680-1a48b0a07a94",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Starting investigation",
+      "created_at": "2026-01-03T13:39:52.724082659+01:00"
+    },
+    {
+      "id": 126,
+      "from_node_id": 157,
+      "to_node_id": 158,
+      "from_change_id": "7d8e59cd-e3fa-4de3-8680-1a48b0a07a94",
+      "to_change_id": "a93b35de-331c-4550-b8f3-edc825e7123c",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Analysis complete",
+      "created_at": "2026-01-03T13:40:31.678288773+01:00"
+    },
+    {
+      "id": 127,
+      "from_node_id": 158,
+      "to_node_id": 159,
+      "from_change_id": "a93b35de-331c-4550-b8f3-edc825e7123c",
+      "to_change_id": "660cf71a-2e6c-4c0b-b713-d91d5a00e872",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Implementing fix",
+      "created_at": "2026-01-03T13:40:39.185272341+01:00"
+    },
+    {
+      "id": 128,
+      "from_node_id": 159,
+      "to_node_id": 160,
+      "from_change_id": "660cf71a-2e6c-4c0b-b713-d91d5a00e872",
+      "to_change_id": "2cc4fe99-d596-4055-8110-7df1bac83a10",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Fix applied and compiled successfully",
+      "created_at": "2026-01-03T13:42:19.317893490+01:00"
+    },
+    {
+      "id": 129,
+      "from_node_id": 160,
+      "to_node_id": 161,
+      "from_change_id": "2cc4fe99-d596-4055-8110-7df1bac83a10",
+      "to_change_id": "ffa113fe-39a8-47c7-9a76-f20bf220e432",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Details of all fixes",
+      "created_at": "2026-01-03T13:42:27.376450255+01:00"
+    },
+    {
+      "id": 130,
+      "from_node_id": 161,
+      "to_node_id": 162,
+      "from_change_id": "ffa113fe-39a8-47c7-9a76-f20bf220e432",
+      "to_change_id": "de30e1f2-821b-470c-9ca5-121db2a20f25",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Changes committed successfully",
+      "created_at": "2026-01-03T13:44:43.195637410+01:00"
+    },
+    {
+      "id": 131,
+      "from_node_id": 163,
+      "to_node_id": 164,
+      "from_change_id": "6ee236f5-9734-4a32-9673-e93e3e478b77",
+      "to_change_id": "f2360997-4a02-4c39-994e-5298ec80606a",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Starting investigation",
+      "created_at": "2026-01-03T13:49:45.653863112+01:00"
+    },
+    {
+      "id": 132,
+      "from_node_id": 164,
+      "to_node_id": 165,
+      "from_change_id": "f2360997-4a02-4c39-994e-5298ec80606a",
+      "to_change_id": "e1b91c49-b210-43ac-92d4-f864523320fe",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Found missing content array handling",
+      "created_at": "2026-01-03T13:50:42.699645485+01:00"
+    },
+    {
+      "id": 133,
+      "from_node_id": 165,
+      "to_node_id": 166,
+      "from_change_id": "e1b91c49-b210-43ac-92d4-f864523320fe",
+      "to_change_id": "69fd65a7-1d5b-4a42-b1d7-248f265d7553",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Implementing fix",
+      "created_at": "2026-01-03T13:50:43.039087212+01:00"
+    },
+    {
+      "id": 134,
+      "from_node_id": 166,
+      "to_node_id": 167,
+      "from_change_id": "69fd65a7-1d5b-4a42-b1d7-248f265d7553",
+      "to_change_id": "fc3e7e7e-be13-4a46-8667-eaf9fd9412bc",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Fix compiled successfully",
+      "created_at": "2026-01-03T13:51:10.533321116+01:00"
+    },
+    {
+      "id": 135,
+      "from_node_id": 167,
+      "to_node_id": 168,
+      "from_change_id": "fc3e7e7e-be13-4a46-8667-eaf9fd9412bc",
+      "to_change_id": "49e59c51-6300-4aeb-91e8-ef7103b13db9",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Details of the issue",
+      "created_at": "2026-01-03T13:51:10.879799834+01:00"
     }
   ]
 }
