@@ -1,5 +1,21 @@
 [
   {
+    "hash": "828e9ea589ff73dd7981319a10b2bc7e76fcbb9e",
+    "short_hash": "828e9ea",
+    "author": "Krzysztof Krzemiński",
+    "date": "2026-01-03T18:16:41+01:00",
+    "message": "feat: calculate totalRows from template metadata in progress calculation\n\nProgress Calculation Enhancement:\n- Changed totalRows calculation to use template metadata instead of RowStatus count\n- Now calculates: expanded template rows + custom rows = totalRows\n- More accurate progress percentages for untouched screens\n\nImplementation Details:\n- Added ProjectScreenService, RowExpansionService, CustomRowRepository dependencies\n- Created getTotalRowsFromTemplate() helper method with REQUIRES_NEW propagation\n- Handles row groups (WORKERS, EXTERNAL_COWORKERS) via RowExpansionService\n- Includes custom rows when customRows is enabled on tab\n- Fallback to touched rows count when template metadata unavailable\n- Independent transaction for metadata retrieval to avoid rollback issues\n\nBenefits:\n- Accurate totalRows even when no rows have been touched yet\n- Proper untouched row count (totalRows - touchedRows)\n- Handles dynamic row expansion from template groups\n- Backward compatible with missing/invalid template models\n\nKnown Issues:\n- Integration tests failing due to missing template models in test setup\n- Tests need proper template.model JSON with screen definitions\n- 11 integration tests affected (RowStatus, ScreenAggregate, Progress tests)\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>",
+    "files_changed": 1
+  },
+  {
+    "hash": "f17c40aedf3c19672399a0a3498d96c30f391b20",
+    "short_hash": "f17c40a",
+    "author": "Krzysztof Krzemiński",
+    "date": "2026-01-03T17:41:08+01:00",
+    "message": "feat: implement isManager check with single query for row comment deletion\n\nAccess Control Enhancement:\n- Implemented isManager method in RowCommentService\n- Added existsManagerByProjectIdAndUserId query to ProjectWorkerRepository\n- Uses single query to check if user has PARTNER or MANAGER role\n\nImplementation Details:\n- New @Query method checks for PARTNER or MANAGER role in ProjectWorker\n- Replaces TODO stub with efficient single-query implementation\n- Enables managers to delete any comment, not just their own\n- RowCommentService now depends on ProjectWorkerRepository\n\nTest Fixes:\n- Fixed InformationRequestPublicControllerIntegrationTest to include screenId\n- Added SCREEN_ID constant = \"ii.2.1\"\n- Resolved validation errors in public controller tests\n\nAll tests passing ✓\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>",
+    "files_changed": 3
+  },
+  {
     "hash": "f0bb5508ab39f0532deed17e4bbfc70e6ff51dbe",
     "short_hash": "f0bb550",
     "author": "Krzysztof Krzemiński",
