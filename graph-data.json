@@ -2782,6 +2782,17 @@
       "created_at": "2026-01-06T15:32:43.115091849+01:00",
       "updated_at": "2026-01-06T15:32:43.115091849+01:00",
       "metadata_json": "{\"branch\":\"main\",\"confidence\":95}"
+    },
+    {
+      "id": 254,
+      "change_id": "f4944732-e067-4a24-a7f9-3a32b9ccc06a",
+      "node_type": "observation",
+      "title": "Implementation complete: Added ScreenUserRepository injection to NewProjectService, created removeScreenUserAssignments() helper method, called before deleting ProjectWorker in two places (partner/manager removal lines 177, assistant removal line 225). Created integration test shouldRemoveScreenUserAssignments_whenProjectWorkerIsRemoved that verifies cleanup. All 139 integration tests pass.",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-06T15:38:01.020585692+01:00",
+      "updated_at": "2026-01-06T15:38:01.020585692+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":95}"
     }
   ],
   "edges": [
@@ -4973,6 +4984,116 @@
       "weight": 1.0,
       "rationale": "Technical implementation details and workflow design rationale",
       "created_at": "2026-01-06T15:21:31.751049613+01:00"
+    },
+    {
+      "id": 200,
+      "from_node_id": 244,
+      "to_node_id": 245,
+      "from_change_id": "617d0b7d-c55f-49fa-945c-62f8182b3286",
+      "to_change_id": "645a9d6f-e660-4528-a186-0b22c77f5132",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Starting investigation",
+      "created_at": "2026-01-06T15:38:11.708456694+01:00"
+    },
+    {
+      "id": 201,
+      "from_node_id": 245,
+      "to_node_id": 246,
+      "from_change_id": "645a9d6f-e660-4528-a186-0b22c77f5132",
+      "to_change_id": "0d9d791d-2b84-4009-8e82-57bd6c779253",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Found entity relationship",
+      "created_at": "2026-01-06T15:38:11.721134572+01:00"
+    },
+    {
+      "id": 202,
+      "from_node_id": 246,
+      "to_node_id": 247,
+      "from_change_id": "0d9d791d-2b84-4009-8e82-57bd6c779253",
+      "to_change_id": "78cd9e94-94af-473e-8895-7337a9fff01a",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Analyzed assignWorkers implementation",
+      "created_at": "2026-01-06T15:38:11.734332654+01:00"
+    },
+    {
+      "id": 203,
+      "from_node_id": 247,
+      "to_node_id": 248,
+      "from_change_id": "78cd9e94-94af-473e-8895-7337a9fff01a",
+      "to_change_id": "7f64fb4d-1d1c-48f4-a826-99b166570439",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Discovered database schema behavior",
+      "created_at": "2026-01-06T15:38:11.746681209+01:00"
+    },
+    {
+      "id": 204,
+      "from_node_id": 248,
+      "to_node_id": 249,
+      "from_change_id": "7f64fb4d-1d1c-48f4-a826-99b166570439",
+      "to_change_id": "fc83bbd6-8b0a-4731-95c8-cdcd142e885e",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Checked service validation",
+      "created_at": "2026-01-06T15:38:11.758216142+01:00"
+    },
+    {
+      "id": 205,
+      "from_node_id": 249,
+      "to_node_id": 250,
+      "from_change_id": "fc83bbd6-8b0a-4731-95c8-cdcd142e885e",
+      "to_change_id": "6a1d0b1a-c095-4146-8e7e-4c333268509a",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Implementing solution",
+      "created_at": "2026-01-06T15:38:11.770286593+01:00"
+    },
+    {
+      "id": 206,
+      "from_node_id": 250,
+      "to_node_id": 251,
+      "from_change_id": "6a1d0b1a-c095-4146-8e7e-4c333268509a",
+      "to_change_id": "f8ed95ea-f3e6-40fb-af94-879a11e5faf0",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Implementation complete",
+      "created_at": "2026-01-06T15:38:11.784439045+01:00"
+    },
+    {
+      "id": 207,
+      "from_node_id": 251,
+      "to_node_id": 252,
+      "from_change_id": "f8ed95ea-f3e6-40fb-af94-879a11e5faf0",
+      "to_change_id": "9bda90a7-8fb2-4363-a246-fbb53b8269a4",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Writing test",
+      "created_at": "2026-01-06T15:38:11.798088187+01:00"
+    },
+    {
+      "id": 208,
+      "from_node_id": 252,
+      "to_node_id": 253,
+      "from_change_id": "9bda90a7-8fb2-4363-a246-fbb53b8269a4",
+      "to_change_id": "ed067f8f-f1b0-43a9-a9c5-ec9b3aa8832f",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Test passes",
+      "created_at": "2026-01-06T15:38:11.809852663+01:00"
+    },
+    {
+      "id": 209,
+      "from_node_id": 253,
+      "to_node_id": 254,
+      "from_change_id": "ed067f8f-f1b0-43a9-a9c5-ec9b3aa8832f",
+      "to_change_id": "f4944732-e067-4a24-a7f9-3a32b9ccc06a",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Final verification and documentation",
+      "created_at": "2026-01-06T15:38:11.821204906+01:00"
     }
   ]
 }
