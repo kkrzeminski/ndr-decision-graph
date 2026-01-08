@@ -2793,6 +2793,138 @@
       "created_at": "2026-01-06T15:38:01.020585692+01:00",
       "updated_at": "2026-01-06T15:38:01.020585692+01:00",
       "metadata_json": "{\"branch\":\"main\",\"confidence\":95}"
+    },
+    {
+      "id": 255,
+      "change_id": "1a3ab3ca-3495-458e-87e3-323428fb2ea8",
+      "node_type": "goal",
+      "title": "Create service for obtaining information requests for whole project",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-08T11:12:18.974858608+01:00",
+      "updated_at": "2026-01-08T11:12:18.974858608+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":90,\"prompt\":\"User requested: Please create service for obtaining information requests for whole project\"}"
+    },
+    {
+      "id": 256,
+      "change_id": "33e123d3-35b9-44e9-a58b-4de4ef6aa046",
+      "node_type": "action",
+      "title": "Investigating existing information request entities and services",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-08T11:12:19.203892946+01:00",
+      "updated_at": "2026-01-08T11:12:19.203892946+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":85}"
+    },
+    {
+      "id": 257,
+      "change_id": "2455d398-de24-4dc3-94dc-cc28d95d459a",
+      "node_type": "observation",
+      "title": "Found existing infrastructure: InformationRequest entity (project_id, screen_id), repository with project-level queries, but controller is screen-scoped only. Need to add project-level endpoint and service method.",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-08T11:12:52.323088177+01:00",
+      "updated_at": "2026-01-08T11:12:52.323088177+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":90}"
+    },
+    {
+      "id": 258,
+      "change_id": "c23a9e1c-e66b-4692-b35a-e32ac9533476",
+      "node_type": "action",
+      "title": "Adding project-level service methods to InformationRequestService",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-08T11:13:02.778509893+01:00",
+      "updated_at": "2026-01-08T11:13:02.778509893+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":85}"
+    },
+    {
+      "id": 259,
+      "change_id": "1f07bfb2-af0b-42dd-8fbf-71ef6cbf1f30",
+      "node_type": "action",
+      "title": "Creating project-level InformationRequest controller",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-08T11:13:47.721842134+01:00",
+      "updated_at": "2026-01-08T11:13:47.721842134+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":85}"
+    },
+    {
+      "id": 260,
+      "change_id": "d0ff9dac-07b9-401e-a8a2-82edfa3d7477",
+      "node_type": "outcome",
+      "title": "Successfully added project-level service methods and controller",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-08T11:14:23.677940262+01:00",
+      "updated_at": "2026-01-08T11:14:23.677940262+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":95}"
+    },
+    {
+      "id": 261,
+      "change_id": "e1b5b02b-6854-4419-ba0b-c08a85ec0626",
+      "node_type": "action",
+      "title": "Writing integration test for project-level information requests endpoint",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-08T11:14:59.919011067+01:00",
+      "updated_at": "2026-01-08T11:14:59.919011067+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":85}"
+    },
+    {
+      "id": 262,
+      "change_id": "a8c4178d-a286-4c73-b7da-04c0b8104e46",
+      "node_type": "outcome",
+      "title": "All 6 integration tests for project-level information requests pass",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-08T11:17:19.804871795+01:00",
+      "updated_at": "2026-01-08T11:17:19.804871795+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":95}"
+    },
+    {
+      "id": 263,
+      "change_id": "8d8bacd9-ebd4-4648-b6c9-8be9cfd6bec3",
+      "node_type": "observation",
+      "title": "Implementation complete: Added getRequestsByProject() and getRequestsByProjectAndStatus() methods to InformationRequestService. Created ProjectInformationRequestController with GET /projects/{projectId}/information-requests endpoint supporting optional status filter. Created comprehensive integration test suite with 6 tests covering all scenarios. All 145 integration tests pass.",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-08T11:22:36.494394070+01:00",
+      "updated_at": "2026-01-08T11:22:36.494394070+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":95}"
+    },
+    {
+      "id": 264,
+      "change_id": "9e4fc9d2-dda7-4fde-ab91-13f4ce8932f4",
+      "node_type": "goal",
+      "title": "Check and potentially add pagination support for project-level information requests endpoint",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-08T11:25:48.176700698+01:00",
+      "updated_at": "2026-01-08T11:25:48.176700698+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":90,\"prompt\":\"User asked: is packaging enabled for get information-requests for project?\"}"
+    },
+    {
+      "id": 265,
+      "change_id": "057fc590-1b43-4198-81d7-d978f1579693",
+      "node_type": "observation",
+      "title": "Neither project-level nor screen-level information request endpoints have pagination. Both return List<InformationRequestResponse> without Page wrapper.",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-08T11:25:57.291879042+01:00",
+      "updated_at": "2026-01-08T11:25:57.291879042+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":90}"
+    },
+    {
+      "id": 266,
+      "change_id": "9bb75b6d-5476-4cea-bfc0-7ac4ea883ece",
+      "node_type": "action",
+      "title": "Implementing pagination for project-level information requests endpoint",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-08T11:27:54.381960357+01:00",
+      "updated_at": "2026-01-08T11:27:54.381960357+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":85}"
     }
   ],
   "edges": [
@@ -5094,6 +5226,94 @@
       "weight": 1.0,
       "rationale": "Final verification and documentation",
       "created_at": "2026-01-06T15:38:11.821204906+01:00"
+    },
+    {
+      "id": 210,
+      "from_node_id": 255,
+      "to_node_id": 256,
+      "from_change_id": "1a3ab3ca-3495-458e-87e3-323428fb2ea8",
+      "to_change_id": "33e123d3-35b9-44e9-a58b-4de4ef6aa046",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Starting investigation",
+      "created_at": "2026-01-08T11:22:45.162055710+01:00"
+    },
+    {
+      "id": 211,
+      "from_node_id": 256,
+      "to_node_id": 257,
+      "from_change_id": "33e123d3-35b9-44e9-a58b-4de4ef6aa046",
+      "to_change_id": "2455d398-de24-4dc3-94dc-cc28d95d459a",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Found existing infrastructure",
+      "created_at": "2026-01-08T11:22:45.175056612+01:00"
+    },
+    {
+      "id": 212,
+      "from_node_id": 257,
+      "to_node_id": 258,
+      "from_change_id": "2455d398-de24-4dc3-94dc-cc28d95d459a",
+      "to_change_id": "c23a9e1c-e66b-4692-b35a-e32ac9533476",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Implementing service methods",
+      "created_at": "2026-01-08T11:22:45.190199539+01:00"
+    },
+    {
+      "id": 213,
+      "from_node_id": 258,
+      "to_node_id": 259,
+      "from_change_id": "c23a9e1c-e66b-4692-b35a-e32ac9533476",
+      "to_change_id": "1f07bfb2-af0b-42dd-8fbf-71ef6cbf1f30",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Creating controller",
+      "created_at": "2026-01-08T11:22:45.202867791+01:00"
+    },
+    {
+      "id": 214,
+      "from_node_id": 259,
+      "to_node_id": 260,
+      "from_change_id": "1f07bfb2-af0b-42dd-8fbf-71ef6cbf1f30",
+      "to_change_id": "d0ff9dac-07b9-401e-a8a2-82edfa3d7477",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Implementation complete",
+      "created_at": "2026-01-08T11:22:45.217653929+01:00"
+    },
+    {
+      "id": 215,
+      "from_node_id": 260,
+      "to_node_id": 261,
+      "from_change_id": "d0ff9dac-07b9-401e-a8a2-82edfa3d7477",
+      "to_change_id": "e1b5b02b-6854-4419-ba0b-c08a85ec0626",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Writing integration tests",
+      "created_at": "2026-01-08T11:22:45.229461381+01:00"
+    },
+    {
+      "id": 216,
+      "from_node_id": 261,
+      "to_node_id": 262,
+      "from_change_id": "e1b5b02b-6854-4419-ba0b-c08a85ec0626",
+      "to_change_id": "a8c4178d-a286-4c73-b7da-04c0b8104e46",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Tests pass",
+      "created_at": "2026-01-08T11:22:45.241107065+01:00"
+    },
+    {
+      "id": 217,
+      "from_node_id": 262,
+      "to_node_id": 263,
+      "from_change_id": "a8c4178d-a286-4c73-b7da-04c0b8104e46",
+      "to_change_id": "8d8bacd9-ebd4-4648-b6c9-8be9cfd6bec3",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Final verification and documentation",
+      "created_at": "2026-01-08T11:22:45.253153884+01:00"
     }
   ]
 }
