@@ -3222,6 +3222,72 @@
       "created_at": "2026-01-17T14:11:01.289277965+01:00",
       "updated_at": "2026-01-17T14:11:01.289277965+01:00",
       "metadata_json": "{\"branch\":\"main\",\"confidence\":98}"
+    },
+    {
+      "id": 294,
+      "change_id": "e4ae00b4-cc98-4010-941a-10b400a3e58c",
+      "node_type": "goal",
+      "title": "Compose requirements for variant column types feature (prompt 028)",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-18T13:37:31.212364402+01:00",
+      "updated_at": "2026-01-18T13:37:31.212364402+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":90,\"prompt\":\"User asked: Perform prompts/028 - prepare requirements for variant column types with UI developer ideas from GitHub issue #41\"}"
+    },
+    {
+      "id": 295,
+      "change_id": "8888662b-8987-45b6-bf32-83c670efe4e8",
+      "node_type": "action",
+      "title": "Designing variant column types based on user decisions: column-level variants list, row-level variantMap selection, validate-only data handling, implicit defaults, template inheritance for groups",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-18T13:51:25.056650082+01:00",
+      "updated_at": "2026-01-18T13:51:25.056650082+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":90}"
+    },
+    {
+      "id": 296,
+      "change_id": "1c02314e-6a59-4ab6-8985-8b1e6b982ffc",
+      "node_type": "outcome",
+      "title": "Created comprehensive 029-variant-column-types.md specification with JSON examples, service layer changes, validation rules, and testing requirements",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-18T13:52:26.521886886+01:00",
+      "updated_at": "2026-01-18T13:52:26.521886886+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":95}"
+    },
+    {
+      "id": 297,
+      "change_id": "5876168f-acfe-46ee-aac8-7f1cdf77e05e",
+      "node_type": "observation",
+      "title": "Key design: Column-level variants list, row-level variantMap selection, validate-only (no conversion), implicit defaults (null=base config), template inheritance for expanded groups. No DB schema changes needed.",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-18T13:52:40.433378073+01:00",
+      "updated_at": "2026-01-18T13:52:40.433378073+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":95}"
+    },
+    {
+      "id": 298,
+      "change_id": "cc2df075-59bb-41f7-9eaf-edd267debce4",
+      "node_type": "action",
+      "title": "Implementing variant column types feature based on specification",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-18T14:54:05.366397683+01:00",
+      "updated_at": "2026-01-18T14:54:05.366397683+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":90}"
+    },
+    {
+      "id": 299,
+      "change_id": "9142efde-b0e9-463b-a7fa-698b639e74d9",
+      "node_type": "outcome",
+      "title": "Variant column types feature implemented: ColumnVariant model, Column.variants, Row.columnVariants, variant resolution in ProjectScreenService. All unit and integration tests pass.",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-18T15:12:33.311754370+01:00",
+      "updated_at": "2026-01-18T15:12:33.311754370+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":95}"
     }
   ],
   "edges": [
@@ -5831,6 +5897,61 @@
       "weight": 1.0,
       "rationale": "All tests passing, committed",
       "created_at": "2026-01-17T14:11:01.311414375+01:00"
+    },
+    {
+      "id": 238,
+      "from_node_id": 294,
+      "to_node_id": 295,
+      "from_change_id": "e4ae00b4-cc98-4010-941a-10b400a3e58c",
+      "to_change_id": "8888662b-8987-45b6-bf32-83c670efe4e8",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Design action follows goal definition",
+      "created_at": "2026-01-18T13:52:25.892601003+01:00"
+    },
+    {
+      "id": 239,
+      "from_node_id": 295,
+      "to_node_id": 296,
+      "from_change_id": "8888662b-8987-45b6-bf32-83c670efe4e8",
+      "to_change_id": "1c02314e-6a59-4ab6-8985-8b1e6b982ffc",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Specification completed successfully",
+      "created_at": "2026-01-18T13:52:34.227561916+01:00"
+    },
+    {
+      "id": 240,
+      "from_node_id": 296,
+      "to_node_id": 297,
+      "from_change_id": "1c02314e-6a59-4ab6-8985-8b1e6b982ffc",
+      "to_change_id": "5876168f-acfe-46ee-aac8-7f1cdf77e05e",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Key architectural decisions documented",
+      "created_at": "2026-01-18T13:52:44.947587527+01:00"
+    },
+    {
+      "id": 241,
+      "from_node_id": 297,
+      "to_node_id": 298,
+      "from_change_id": "5876168f-acfe-46ee-aac8-7f1cdf77e05e",
+      "to_change_id": "cc2df075-59bb-41f7-9eaf-edd267debce4",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Starting implementation after specification complete",
+      "created_at": "2026-01-18T14:54:24.684138114+01:00"
+    },
+    {
+      "id": 242,
+      "from_node_id": 298,
+      "to_node_id": 299,
+      "from_change_id": "cc2df075-59bb-41f7-9eaf-edd267debce4",
+      "to_change_id": "9142efde-b0e9-463b-a7fa-698b639e74d9",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Implementation completed successfully with all tests passing",
+      "created_at": "2026-01-18T15:12:48.208978669+01:00"
     }
   ]
 }
