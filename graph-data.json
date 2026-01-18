@@ -3167,6 +3167,61 @@
       "created_at": "2026-01-16T20:55:56.873615796+01:00",
       "updated_at": "2026-01-16T20:55:56.873615796+01:00",
       "metadata_json": "{\"branch\":\"main\",\"confidence\":100}"
+    },
+    {
+      "id": 289,
+      "change_id": "c47b80b4-08ad-46ae-bb1b-31abe23ea633",
+      "node_type": "goal",
+      "title": "Finish refinement of ndr-documents issue #47 - Dashboard role-based filtering",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-17T13:58:40.655809530+01:00",
+      "updated_at": "2026-01-17T13:58:40.655809530+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":90,\"prompt\":\"User asked: Please finish interrupted refinement of ndr-documents issue $47\"}"
+    },
+    {
+      "id": 290,
+      "change_id": "3bdc7362-bcbf-47da-a6ee-adca97b8b896",
+      "node_type": "outcome",
+      "title": "Issue #47 refinement completed with detailed implementation spec",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-17T14:00:31.958431536+01:00",
+      "updated_at": "2026-01-17T14:00:31.958431536+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":95}"
+    },
+    {
+      "id": 291,
+      "change_id": "45b49bca-e359-48fb-98b7-ff096ff30da9",
+      "node_type": "goal",
+      "title": "Implement issue #47 - Dashboard role-based project filtering",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-17T14:01:22.971861124+01:00",
+      "updated_at": "2026-01-17T14:01:22.971861124+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":90,\"prompt\":\"User asked: Please implement it (referring to issue #47 refinement)\"}"
+    },
+    {
+      "id": 292,
+      "change_id": "c39d362b-b847-4af6-b05c-4471c4333f3b",
+      "node_type": "action",
+      "title": "Implemented dashboard role-based filtering with 8 integration tests",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-17T14:10:40.220439738+01:00",
+      "updated_at": "2026-01-17T14:10:40.220439738+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":95}"
+    },
+    {
+      "id": 293,
+      "change_id": "89521502-0843-4e3c-8661-01e549bf19f4",
+      "node_type": "outcome",
+      "title": "Feature complete: Dashboard role-based filtering with 8 tests, committed as 32b1be9",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-17T14:11:01.289277965+01:00",
+      "updated_at": "2026-01-17T14:11:01.289277965+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":98}"
     }
   ],
   "edges": [
@@ -5743,6 +5798,39 @@
       "weight": 1.0,
       "rationale": "All tests passing, committed as 49613e5",
       "created_at": "2026-01-16T20:56:01.558199403+01:00"
+    },
+    {
+      "id": 235,
+      "from_node_id": 289,
+      "to_node_id": 290,
+      "from_change_id": "c47b80b4-08ad-46ae-bb1b-31abe23ea633",
+      "to_change_id": "3bdc7362-bcbf-47da-a6ee-adca97b8b896",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Refinement completed successfully",
+      "created_at": "2026-01-17T14:00:31.984560904+01:00"
+    },
+    {
+      "id": 236,
+      "from_node_id": 291,
+      "to_node_id": 292,
+      "from_change_id": "45b49bca-e359-48fb-98b7-ff096ff30da9",
+      "to_change_id": "c39d362b-b847-4af6-b05c-4471c4333f3b",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Implementation complete",
+      "created_at": "2026-01-17T14:10:40.243425476+01:00"
+    },
+    {
+      "id": 237,
+      "from_node_id": 292,
+      "to_node_id": 293,
+      "from_change_id": "c39d362b-b847-4af6-b05c-4471c4333f3b",
+      "to_change_id": "89521502-0843-4e3c-8661-01e549bf19f4",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "All tests passing, committed",
+      "created_at": "2026-01-17T14:11:01.311414375+01:00"
     }
   ]
 }
