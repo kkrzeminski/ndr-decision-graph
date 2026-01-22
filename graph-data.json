@@ -3321,6 +3321,39 @@
       "created_at": "2026-01-19T14:17:32.484731628+01:00",
       "updated_at": "2026-01-19T14:17:32.484731628+01:00",
       "metadata_json": "{\"branch\":\"main\",\"confidence\":100}"
+    },
+    {
+      "id": 303,
+      "change_id": "c2536023-09e0-4519-ae13-280cd9999683",
+      "node_type": "goal",
+      "title": "Write integration tests for Application Service (commit 8839f66)",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-21T18:42:05.242861391+01:00",
+      "updated_at": "2026-01-21T18:42:05.242861391+01:00",
+      "metadata_json": "{\"confidence\":90,\"prompt\":\"User asked: switch to origin/Application branch and write integration tests for commit 8839f668719362813d6de08b52d11e8721bf8e86\"}"
+    },
+    {
+      "id": 304,
+      "change_id": "c1d399da-a9cd-4e44-b3b3-457bce2e9c29",
+      "node_type": "action",
+      "title": "Creating ApplicationControllerIntegrationTest with comprehensive test coverage",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-21T18:44:04.825137863+01:00",
+      "updated_at": "2026-01-21T18:44:04.825137863+01:00",
+      "metadata_json": "{\"confidence\":85}"
+    },
+    {
+      "id": 305,
+      "change_id": "a4ad4f59-e2ae-4967-b8e1-bea778328db2",
+      "node_type": "outcome",
+      "title": "All 20 ApplicationController integration tests pass: GET/PUT application, POST /ready, POST /draft, GET/DELETE signed-documents",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-21T18:48:33.317818164+01:00",
+      "updated_at": "2026-01-21T18:48:33.317818164+01:00",
+      "metadata_json": "{\"confidence\":95}"
     }
   ],
   "edges": [
@@ -6007,6 +6040,28 @@
       "weight": 1.0,
       "rationale": "Implementation complete",
       "created_at": "2026-01-19T14:17:32.508960292+01:00"
+    },
+    {
+      "id": 245,
+      "from_node_id": 303,
+      "to_node_id": 304,
+      "from_change_id": "c2536023-09e0-4519-ae13-280cd9999683",
+      "to_change_id": "c1d399da-a9cd-4e44-b3b3-457bce2e9c29",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Starting implementation",
+      "created_at": "2026-01-21T18:44:09.700323872+01:00"
+    },
+    {
+      "id": 246,
+      "from_node_id": 304,
+      "to_node_id": 305,
+      "from_change_id": "c1d399da-a9cd-4e44-b3b3-457bce2e9c29",
+      "to_change_id": "a4ad4f59-e2ae-4967-b8e1-bea778328db2",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "All integration tests passing",
+      "created_at": "2026-01-21T18:48:37.899543744+01:00"
     }
   ]
 }
