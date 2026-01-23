@@ -1,5 +1,21 @@
 [
   {
+    "hash": "603e1d7ffc7d37e27bba17c16aa3e3ee1e9691c2",
+    "short_hash": "603e1d7",
+    "author": "Krzysztof Krzemiński",
+    "date": "2026-01-23T10:52:41+01:00",
+    "message": "docs: add requirements prompt for Issue #58 optional KRS/REGON\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>",
+    "files_changed": 1
+  },
+  {
+    "hash": "038c25bb920835d4628f37815d25f4ce5e6f3b6f",
+    "short_hash": "038c25b",
+    "author": "Krzysztof Krzemiński",
+    "date": "2026-01-23T10:15:02+01:00",
+    "message": "feat: make KRS and REGON optional for manual customer creation (#58)\n\n- Add Liquibase migration to remove NOT NULL constraints from krs and regon columns\n- Update Customer entity to allow null values for krs and regon\n- Update CustomerRequest DTO to remove @NotBlank validation from optional fields\n- Update CustomerService to handle null/empty values:\n  - Normalize empty/whitespace strings to null\n  - Only check uniqueness for non-null values\n  - Trim whitespace from optional fields\n- Add 11 integration tests covering:\n  - Create customer with only name + NIP\n  - Create customer with partial fields\n  - Multiple customers without KRS/REGON\n  - Duplicate validation still works for non-null values\n  - Update to add/remove KRS later\n  - Empty string and whitespace handling\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>",
+    "files_changed": 6
+  },
+  {
     "hash": "828e9ea589ff73dd7981319a10b2bc7e76fcbb9e",
     "short_hash": "828e9ea",
     "author": "Krzysztof Krzemiński",

@@ -3354,6 +3354,39 @@
       "created_at": "2026-01-21T18:48:33.317818164+01:00",
       "updated_at": "2026-01-21T18:48:33.317818164+01:00",
       "metadata_json": "{\"confidence\":95}"
+    },
+    {
+      "id": 306,
+      "change_id": "e68aab4b-564c-41f9-a37f-387010169919",
+      "node_type": "goal",
+      "title": "Make KRS and REGON optional for manual customer creation (Issue #58)",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-23T10:53:11.475093996+01:00",
+      "updated_at": "2026-01-23T10:53:11.475093996+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":100,\"prompt\":\"please implement\\n\\n(Context: Issue #58 - Manual Customer Creation Without KRS)\\nCurrently the customer creation endpoint requires all fields (name, regon, nip, krs).\\nThis prevents adding customers not registered in KRS (sole proprietorships, civil partnerships).\\n\\nRequirements:\\n- Make KRS and REGON optional (only name + NIP required)\\n- Database migration to remove NOT NULL constraints\\n- Update entity, DTO, and service to handle null values\\n- Add integration tests for new scenarios\"}"
+    },
+    {
+      "id": 307,
+      "change_id": "e011eda6-7472-405c-b6a1-9ff4e2f53473",
+      "node_type": "action",
+      "title": "Implemented optional KRS/REGON with 11 new integration tests",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-23T10:53:17.819165403+01:00",
+      "updated_at": "2026-01-23T10:53:17.819165403+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"commit\":\"038c25b\",\"confidence\":100,\"files\":[\"src/main/java/com/swgk/ndr/entity/Customer.java\",\"src/main/java/com/swgk/ndr/dto/CustomerRequest.java\",\"src/main/java/com/swgk/ndr/service/CustomerService.java\",\"src/main/resources/db/changelog/2026/01/2026-01-22-make-krs-regon-optional.sql\"]}"
+    },
+    {
+      "id": 308,
+      "change_id": "7868b9ad-4389-4cda-8b70-13b94ba1f7d9",
+      "node_type": "outcome",
+      "title": "Issue #58 complete - all 188 tests pass, pushed to main",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-23T10:53:27.490726868+01:00",
+      "updated_at": "2026-01-23T10:53:27.490726868+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"commit\":\"603e1d7\",\"confidence\":100}"
     }
   ],
   "edges": [
@@ -6062,6 +6095,28 @@
       "weight": 1.0,
       "rationale": "All integration tests passing",
       "created_at": "2026-01-21T18:48:37.899543744+01:00"
+    },
+    {
+      "id": 247,
+      "from_node_id": 306,
+      "to_node_id": 307,
+      "from_change_id": "e68aab4b-564c-41f9-a37f-387010169919",
+      "to_change_id": "e011eda6-7472-405c-b6a1-9ff4e2f53473",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Implementation of Issue #58",
+      "created_at": "2026-01-23T10:53:22.592388065+01:00"
+    },
+    {
+      "id": 248,
+      "from_node_id": 307,
+      "to_node_id": 308,
+      "from_change_id": "e011eda6-7472-405c-b6a1-9ff4e2f53473",
+      "to_change_id": "7868b9ad-4389-4cda-8b70-13b94ba1f7d9",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "All tests pass, committed and pushed",
+      "created_at": "2026-01-23T10:53:31.785166692+01:00"
     }
   ]
 }
