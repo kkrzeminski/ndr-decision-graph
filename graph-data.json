@@ -3596,6 +3596,39 @@
       "created_at": "2026-01-23T11:14:26.815652307+01:00",
       "updated_at": "2026-01-23T11:14:26.815652307+01:00",
       "metadata_json": "{\"branch\":\"main\",\"commit\":\"bef8b37\",\"confidence\":100}"
+    },
+    {
+      "id": 328,
+      "change_id": "addf916b-ed69-465d-b693-e6fe358b7728",
+      "node_type": "goal",
+      "title": "Review pending ndr-documents issues and create analysis report",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-23T11:37:39.045173102+01:00",
+      "updated_at": "2026-01-23T11:37:39.045173102+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":100,\"prompt\":\"Please review pending ndr-documents issues and put result of your analysis within reports folder\"}"
+    },
+    {
+      "id": 329,
+      "change_id": "88f6d2f3-6757-44ee-96db-9d93ff2ab039",
+      "node_type": "action",
+      "title": "Created comprehensive issues analysis report",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-23T11:38:35.330038807+01:00",
+      "updated_at": "2026-01-23T11:38:35.330038807+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":100,\"files\":[\"reports/2026-01-23-ndr-documents-issues-analysis.md\"]}"
+    },
+    {
+      "id": 330,
+      "change_id": "a5ef52cd-007f-448d-9f83-aeaa7700d684",
+      "node_type": "outcome",
+      "title": "Report identifies 4 resolved, 3 bugs, 6 features from 13 open issues",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-23T11:38:41.825261398+01:00",
+      "updated_at": "2026-01-23T11:38:41.825261398+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":100}"
     }
   ],
   "edges": [
@@ -6502,6 +6535,28 @@
       "weight": 1.0,
       "rationale": "PR merged",
       "created_at": "2026-01-23T11:14:26.829347821+01:00"
+    },
+    {
+      "id": 265,
+      "from_node_id": 328,
+      "to_node_id": 329,
+      "from_change_id": "addf916b-ed69-465d-b693-e6fe358b7728",
+      "to_change_id": "88f6d2f3-6757-44ee-96db-9d93ff2ab039",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Analysis complete",
+      "created_at": "2026-01-23T11:38:35.343137463+01:00"
+    },
+    {
+      "id": 266,
+      "from_node_id": 329,
+      "to_node_id": 330,
+      "from_change_id": "88f6d2f3-6757-44ee-96db-9d93ff2ab039",
+      "to_change_id": "a5ef52cd-007f-448d-9f83-aeaa7700d684",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Analysis findings",
+      "created_at": "2026-01-23T11:38:41.838233385+01:00"
     }
   ]
 }
