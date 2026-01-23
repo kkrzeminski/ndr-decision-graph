@@ -1,5 +1,13 @@
 [
   {
+    "hash": "015456deb4822cba20eb9cb9efa32c6592c8c757",
+    "short_hash": "015456d",
+    "author": "Krzysztof Krzemiński",
+    "date": "2026-01-23T16:05:40+01:00",
+    "message": "docs: add diagnostic prompt for Issue #57 progress calculation bug\n\nAnalysis of progress showing 100% when only one tab is complete:\n\nFindings:\n- Backend implementation is CORRECT\n- ScreenProgressService properly aggregates across all tabs\n- Three progress levels available: Tab, Screen (aggregated), Project\n\nRoot cause (likely):\nFrontend uses tab-level endpoint instead of screen-level endpoint:\n- Wrong: GET /screens/{id}/tabs/{tabId}/progress (single tab)\n- Correct: GET /screens/{id}/progress (all tabs aggregated)\n\nScreen-level response includes:\n- completionPercentage: Overall screen completion\n- tabs[]: Per-tab breakdown for UI display\n- totalTabs/completedTabs: Tab completion summary\n\nRecommended action:\n1. Verify frontend endpoint usage via DevTools\n2. Update to use screen-level endpoint if needed\n3. Use tabs[] array for per-tab progress display\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>",
+    "files_changed": 1
+  },
+  {
     "hash": "27b3a37187904c04a2aef9995f86cb1ec2d70e5c",
     "short_hash": "27b3a37",
     "author": "Krzysztof Krzemiński",
