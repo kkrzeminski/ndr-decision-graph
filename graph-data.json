@@ -3673,6 +3673,17 @@
       "created_at": "2026-01-23T12:02:11.724182092+01:00",
       "updated_at": "2026-01-23T12:02:11.724182092+01:00",
       "metadata_json": "{\"branch\":\"main\",\"commit\":\"27b3a37\",\"confidence\":100}"
+    },
+    {
+      "id": 335,
+      "change_id": "be54468c-6b72-4551-851b-80836aa1c55c",
+      "node_type": "goal",
+      "title": "Investigate and prepare prompt for Issue #57 - Progress calculation bug",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-23T12:23:02.997605861+01:00",
+      "updated_at": "2026-01-23T12:23:02.997605861+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":100,\"prompt\":\"Please prepare prompt for #57 in pronpts/033-\"}"
     }
   ],
   "edges": [
