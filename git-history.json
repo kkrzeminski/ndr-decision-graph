@@ -16,6 +16,142 @@
     "files_changed": 6
   },
   {
+    "hash": "bef8b374ad1cdb69a685c7c0c2d34320cba32965",
+    "short_hash": "bef8b37",
+    "author": "Kris",
+    "date": "2026-01-22T21:25:00+01:00",
+    "message": "Merge pull request #9 from kkrzeminski/unassign-users-on-worker-change\n\nFix: remove assigned users when project workers change",
+    "files_changed": 0
+  },
+  {
+    "hash": "d2fff5f80d14f838527a69d7e60c71570873dcae",
+    "short_hash": "d2fff5f",
+    "author": "Krzysztof Krzemiński",
+    "date": "2026-01-22T21:22:29+01:00",
+    "message": "docs: add code reviews for PR #9 commits\n\nAdd detailed code reviews for each commit in the PR:\n- da15879: Screen user cleanup on worker change\n- 48bcda9: UserInfo structure for performedBy (breaking change)\n- e711bbd: Progress percentage fields\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>",
+    "files_changed": 6
+  },
+  {
+    "hash": "c63707b99aa1dedceaf8c07c77868d43a175208e",
+    "short_hash": "c63707b",
+    "author": "Krzysztof Krzemiński",
+    "date": "2026-01-22T21:17:19+01:00",
+    "message": "fix: update existing test for UserInfo performedBy change\n\nUpdate ProgressControllerIntegrationTest to use UserInfo.getName()\ninstead of comparing performedBy directly to a string.\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>",
+    "files_changed": 1
+  },
+  {
+    "hash": "3658d4272ea43e9a8afdb12d399dfa587fea2c26",
+    "short_hash": "3658d42",
+    "author": "Krzysztof Krzemiński",
+    "date": "2026-01-22T16:27:33+01:00",
+    "message": "test: add integration tests for progress percentage fields\n\nVerifies that project detail and dashboard responses include new\nprogress percentage fields: readyPercentage, approvedPercentage,\nand approvedRows.\n\nTests commit e711bbd behavior including:\n- ProjectDetailResponse includes readyPercentage and approvedPercentage\n- Dashboard OverallProgress includes approvedRows and percentage fields\n- Percentages are within valid range (0-100)\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>",
+    "files_changed": 2
+  },
+  {
+    "hash": "a938013996acaa519e9c8c6c2379f6f2919d2b8a",
+    "short_hash": "a938013",
+    "author": "Krzysztof Krzemiński",
+    "date": "2026-01-22T16:26:06+01:00",
+    "message": "test: add integration tests for ActivityLog performedBy UserInfo\n\nVerifies that activity log responses return performedBy as UserInfo\nobject with id, name, and email fields instead of separate userId\nand performedBy string fields.\n\nTests commit 48bcda9 behavior including:\n- UserInfo object structure in activity log response\n- Name fallback to username when firstName/lastName are null\n- Row-level activity log responses\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>",
+    "files_changed": 1
+  },
+  {
+    "hash": "65427cbd9c815f94317adad55ad01902945dbf57",
+    "short_hash": "65427cb",
+    "author": "Krzysztof Krzemiński",
+    "date": "2026-01-22T16:24:34+01:00",
+    "message": "test: add integration test for screen user cleanup on worker change\n\nVerifies that when a project worker's user is changed (same role,\ndifferent user), the old user's screen assignments are removed.\n\nTests commit da15879 behavior.\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>",
+    "files_changed": 1
+  },
+  {
+    "hash": "e711bbdd19d522f3956db07bf9026cdb62d72128",
+    "short_hash": "e711bbd",
+    "author": "markrz12",
+    "date": "2026-01-22T16:03:21+01:00",
+    "message": "feat: update project progress display for /projects/{id} and /projects/dashboard",
+    "files_changed": 4
+  },
+  {
+    "hash": "48bcda904b5ee11b9ed71181d58228a649cbcb46",
+    "short_hash": "48bcda9",
+    "author": "markrz12",
+    "date": "2026-01-22T14:01:40+01:00",
+    "message": "Log user information - \"performedBy\" has now \"id\",\"name\",\"email\"",
+    "files_changed": 4
+  },
+  {
+    "hash": "da15879848e6e10a26fb8d84c943b7ddc8f86082",
+    "short_hash": "da15879",
+    "author": "markrz12",
+    "date": "2026-01-22T12:12:15+01:00",
+    "message": "Fix: remove assigned users when project workers change",
+    "files_changed": 1
+  },
+  {
+    "hash": "086fc0d8272fee05a2e3592b4509a204955b0d6a",
+    "short_hash": "086fc0d",
+    "author": "Krzysztof Krzemiński",
+    "date": "2026-01-21T19:09:47+01:00",
+    "message": "chore: remove database backup file from git tracking\n\n- Remove ndr_db_backup.dump from repository\n- Add to .gitignore to prevent future commits\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>",
+    "files_changed": 2
+  },
+  {
+    "hash": "6cf8400aba87a37b987cccc1fb3edf394a183d4b",
+    "short_hash": "6cf8400",
+    "author": "Krzysztof Krzemiński",
+    "date": "2026-01-21T19:01:29+01:00",
+    "message": "Merge branch 'Application' - Add Application Service with integration tests",
+    "files_changed": 0
+  },
+  {
+    "hash": "3b503b5b0d1ff061da76c326b0a81fff9dddcb7f",
+    "short_hash": "3b503b5",
+    "author": "Krzysztof Krzemiński",
+    "date": "2026-01-21T19:01:18+01:00",
+    "message": "test: add integration tests for ApplicationController\n\n- Add 20 comprehensive integration tests for Application (Wniosek) feature\n- Test GET/PUT application endpoints with template defaults\n- Test POST /ready and /draft status transitions\n- Test GET/DELETE signed documents endpoints\n- Test full status workflow: DRAFT → READY_FOR_SIGNATURE → DRAFT\n- Mock Office365Service for file upload operations\n- Apply spotless formatting to Application service files\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>",
+    "files_changed": 6
+  },
+  {
+    "hash": "8839f668719362813d6de08b52d11e8721bf8e86",
+    "short_hash": "8839f66",
+    "author": "markrz12",
+    "date": "2026-01-21T14:51:48+01:00",
+    "message": "Application Service",
+    "files_changed": 23
+  },
+  {
+    "hash": "6c234da4ff44ef2c1d8bb61f066317583cba796c",
+    "short_hash": "6c234da",
+    "author": "Krzysztof Krzemiński",
+    "date": "2026-01-19T14:17:20+01:00",
+    "message": "feat: add explicit type and dataType fields to cell response\n\nAdd type (ColumnType) and dataType (DataType) fields to Cell class\nso frontend doesn't need to resolve variants manually.\n\nCloses #56\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>",
+    "files_changed": 2
+  },
+  {
+    "hash": "6933d2892bead29aa32ea5ea0ca913a9d0422217",
+    "short_hash": "6933d28",
+    "author": "Krzysztof Krzemiński",
+    "date": "2026-01-18T15:13:12+01:00",
+    "message": "feat: implement variant column types for row-specific column overrides\n\n- Add ColumnVariant model for defining column attribute overrides\n- Add Column.variants field for optional list of variant definitions\n- Add Row.columnVariants map for row-specific variant selection\n- Implement getEffectiveColumn() in ProjectScreenService for variant resolution\n- Include columnVariants in getRows response for frontend rendering\n- Validate cell values against effective column's dataType\n\nVariants allow rows to use different column configurations (e.g., a YES_NO\ncolumn can become a COMMENT field for specific rows). No database schema\nchanges required - variants stored in template JSON.\n\nCloses: ndr-documents#41\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>",
+    "files_changed": 7
+  },
+  {
+    "hash": "99d3c6def4b2017b1acc89f6932feb3ef7f384ef",
+    "short_hash": "99d3c6d",
+    "author": "Krzysztof Krzemiński",
+    "date": "2026-01-18T14:44:16+01:00",
+    "message": "docs: add variant column types specification\n\n- Created prompts/029-variant-column-types.md with full implementation spec\n- Column-level variants list with row-level variantMap selection\n- No API changes required - backend resolves variants internally\n- Includes JSON examples, service layer changes, validation rules\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>",
+    "files_changed": 2
+  },
+  {
+    "hash": "7f58213aaac75c483a3b4486cdf551ff9af6e5bb",
+    "short_hash": "7f58213",
+    "author": "Krzysztof Krzemiński",
+    "date": "2026-01-18T13:36:49+01:00",
+    "message": "feat: add requirements and prompt preparation for variant column types\n\n- Introduced support for variant column metadata, enabling optional attributes that override all except 'id', 'title', and 'legalBasis'.\n- Updated `setCellValue` and `getCellValue` methods to account for variants.\n- Added documentation and prompt preparation for developers, ensuring alignment with issue ndr-documents#41.",
+    "files_changed": 1
+  },
+  {
     "hash": "828e9ea589ff73dd7981319a10b2bc7e76fcbb9e",
     "short_hash": "828e9ea",
     "author": "Krzysztof Krzemiński",

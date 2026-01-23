@@ -3387,6 +3387,215 @@
       "created_at": "2026-01-23T10:53:27.490726868+01:00",
       "updated_at": "2026-01-23T10:53:27.490726868+01:00",
       "metadata_json": "{\"branch\":\"main\",\"commit\":\"603e1d7\",\"confidence\":100}"
+    },
+    {
+      "id": 309,
+      "change_id": "7e801c3b-9479-4166-bd93-0140a7335ba7",
+      "node_type": "action",
+      "title": "Created requirements and specification for variant column types",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-23T11:02:08.966801103+01:00",
+      "updated_at": "2026-01-23T11:02:08.966801103+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"commit\":\"7f58213\",\"confidence\":100,\"files\":[\"prompts/028-variant-column-types-requirements.md\"]}"
+    },
+    {
+      "id": 310,
+      "change_id": "9c68c7bb-5109-4fea-a9ab-457fb82a4b81",
+      "node_type": "action",
+      "title": "Created variant column types specification document",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-23T11:02:22.576883659+01:00",
+      "updated_at": "2026-01-23T11:02:22.576883659+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"commit\":\"99d3c6d\",\"confidence\":100,\"files\":[\"prompts/029-variant-column-types.md\"]}"
+    },
+    {
+      "id": 311,
+      "change_id": "983bab53-0910-47a7-bd1f-f1298d874f94",
+      "node_type": "action",
+      "title": "Implemented variant column types for row-specific column overrides",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-23T11:02:29.068990899+01:00",
+      "updated_at": "2026-01-23T11:02:29.068990899+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"commit\":\"6933d28\",\"confidence\":100,\"files\":[\"src/main/java/com/swgk/ndr/service/ProjectScreenService.java\",\"src/main/java/com/swgk/ndr/model/Column.java\",\"src/main/java/com/swgk/ndr/model/Row.java\"]}"
+    },
+    {
+      "id": 312,
+      "change_id": "0e06f8a8-c904-46e1-bae5-c4b27147bc00",
+      "node_type": "action",
+      "title": "Added explicit type and dataType fields to cell response",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-23T11:02:36.066320342+01:00",
+      "updated_at": "2026-01-23T11:02:36.066320342+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"commit\":\"6c234da\",\"confidence\":100,\"files\":[\"src/main/java/com/swgk/ndr/model/Cell.java\",\"src/main/java/com/swgk/ndr/service/ProjectScreenService.java\"]}"
+    },
+    {
+      "id": 313,
+      "change_id": "019eaa7c-8af1-4e7c-893e-fc2ca6c04a9f",
+      "node_type": "goal",
+      "title": "Implement Application Service feature",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-23T11:02:44.088113823+01:00",
+      "updated_at": "2026-01-23T11:02:44.088113823+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":100,\"prompt\":\"Please switch origin/Application branch and write integration tests for 8839f668719362813d6de08b52d11e8721bf8e86 commit\"}"
+    },
+    {
+      "id": 314,
+      "change_id": "06420f69-ad86-4559-92d6-d49924211732",
+      "node_type": "action",
+      "title": "Implemented Application Service with CRUD operations and status workflow",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-23T11:02:51.146967789+01:00",
+      "updated_at": "2026-01-23T11:02:51.146967789+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"commit\":\"8839f66\",\"confidence\":100,\"files\":[\"src/main/java/com/swgk/ndr/service/ApplicationService.java\",\"src/main/java/com/swgk/ndr/controller/ApplicationController.java\",\"src/main/java/com/swgk/ndr/entity/Application.java\"]}"
+    },
+    {
+      "id": 315,
+      "change_id": "9709089d-7736-4f62-b17d-c037bdc767e6",
+      "node_type": "action",
+      "title": "Added 20 integration tests for ApplicationController",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-23T11:02:57.444514983+01:00",
+      "updated_at": "2026-01-23T11:02:57.444514983+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"commit\":\"3b503b5\",\"confidence\":100,\"files\":[\"src/integration/java/com/swgk/ndr/controller/ApplicationControllerIntegrationTest.java\"]}"
+    },
+    {
+      "id": 316,
+      "change_id": "b7b6ed5a-5fd1-4645-81c3-c9ea59b6db07",
+      "node_type": "outcome",
+      "title": "Application Service merged to main with 20 passing tests",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-23T11:03:03.453131140+01:00",
+      "updated_at": "2026-01-23T11:03:03.453131140+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"commit\":\"6cf8400\",\"confidence\":100}"
+    },
+    {
+      "id": 317,
+      "change_id": "a8d714a2-1128-4a88-8715-6ccc25fa9d01",
+      "node_type": "action",
+      "title": "Removed database backup file from git tracking",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-23T11:03:09.237158840+01:00",
+      "updated_at": "2026-01-23T11:03:09.237158840+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"commit\":\"086fc0d\",\"confidence\":100,\"files\":[\".gitignore\"]}"
+    },
+    {
+      "id": 318,
+      "change_id": "c9493d23-9f92-4a17-a15c-4f06fff82693",
+      "node_type": "goal",
+      "title": "Review and test PR #9 - Worker assignment changes and user info improvements",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-23T11:04:37.664761612+01:00",
+      "updated_at": "2026-01-23T11:04:37.664761612+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":100,\"prompt\":\"switch to pull request #9\\n\\nPlease review each commit, for each commit write review in file in review sub folder. Then Start writing integration test for each commit. Commit them per each commit. ASK questions only if something is not clear\"}"
+    },
+    {
+      "id": 319,
+      "change_id": "a3a41a05-bdd9-482b-a701-cff9abb7fb9c",
+      "node_type": "action",
+      "title": "Fix: remove assigned users when project workers change",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-23T11:04:44.537381960+01:00",
+      "updated_at": "2026-01-23T11:04:44.537381960+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"commit\":\"da15879\",\"confidence\":100,\"files\":[\"src/main/java/com/swgk/ndr/service/ProjectService.java\"]}"
+    },
+    {
+      "id": 320,
+      "change_id": "b49e22f0-8dda-47cd-922f-c65f9c6b1313",
+      "node_type": "action",
+      "title": "Log user information - performedBy now has id, name, email",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-23T11:04:51.483086951+01:00",
+      "updated_at": "2026-01-23T11:04:51.483086951+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"commit\":\"48bcda9\",\"confidence\":100,\"files\":[\"src/main/java/com/swgk/ndr/dto/ActivityLogResponse.java\",\"src/main/java/com/swgk/ndr/dto/UserInfo.java\"]}"
+    },
+    {
+      "id": 321,
+      "change_id": "ad952fa6-f683-4ca2-8e48-04b00ea6e020",
+      "node_type": "action",
+      "title": "Update project progress display with percentages",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-23T11:04:58.298717118+01:00",
+      "updated_at": "2026-01-23T11:04:58.298717118+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"commit\":\"e711bbd\",\"confidence\":100,\"files\":[\"src/main/java/com/swgk/ndr/dto/ProjectDetailResponse.java\",\"src/main/java/com/swgk/ndr/dto/dashboard/ProjectDashboardResponse.java\"]}"
+    },
+    {
+      "id": 322,
+      "change_id": "9338dcb2-5f2b-4727-8bbf-b34220feecbc",
+      "node_type": "action",
+      "title": "Added integration test for screen user cleanup on worker change",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-23T11:05:05.797174495+01:00",
+      "updated_at": "2026-01-23T11:05:05.797174495+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"commit\":\"65427cb\",\"confidence\":100,\"files\":[\"src/integration/java/com/swgk/ndr/controller/ProjectControllerIntegrationTest.java\"]}"
+    },
+    {
+      "id": 323,
+      "change_id": "72f8bed5-0187-40f7-abc8-bbe76ceb10d5",
+      "node_type": "action",
+      "title": "Added integration tests for ActivityLog performedBy UserInfo",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-23T11:08:50.359012378+01:00",
+      "updated_at": "2026-01-23T11:08:50.359012378+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"commit\":\"a938013\",\"confidence\":100,\"files\":[\"src/integration/java/com/swgk/ndr/controller/ActivityLogIntegrationTest.java\"]}"
+    },
+    {
+      "id": 324,
+      "change_id": "b17bd324-e472-4a1b-bd09-e4d0286845cf",
+      "node_type": "action",
+      "title": "Added integration tests for progress percentage fields",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-23T11:14:03.150192114+01:00",
+      "updated_at": "2026-01-23T11:14:03.150192114+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"commit\":\"3658d42\",\"confidence\":100,\"files\":[\"src/integration/java/com/swgk/ndr/controller/DashboardControllerIntegrationTest.java\",\"src/integration/java/com/swgk/ndr/controller/ProjectControllerIntegrationTest.java\"]}"
+    },
+    {
+      "id": 325,
+      "change_id": "f2798eff-d738-4e26-912e-8fec30403fe6",
+      "node_type": "action",
+      "title": "Fixed existing test for UserInfo performedBy change",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-23T11:14:11.176017903+01:00",
+      "updated_at": "2026-01-23T11:14:11.176017903+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"commit\":\"c63707b\",\"confidence\":100,\"files\":[\"src/integration/java/com/swgk/ndr/controller/ProgressControllerIntegrationTest.java\"]}"
+    },
+    {
+      "id": 326,
+      "change_id": "97021e29-41dc-4ef0-87cd-97fe11c84c89",
+      "node_type": "action",
+      "title": "Added code reviews for PR #9 commits",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-23T11:14:19.946192818+01:00",
+      "updated_at": "2026-01-23T11:14:19.946192818+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"commit\":\"d2fff5f\",\"confidence\":100,\"files\":[\"review/commit-da15879-remove-assigned-users.md\",\"review/commit-48bcda9-performedBy-userinfo.md\",\"review/commit-e711bbd-progress-display.md\"]}"
+    },
+    {
+      "id": 327,
+      "change_id": "1fd22ae1-3ae6-4bc8-b117-be9caad54edb",
+      "node_type": "outcome",
+      "title": "PR #9 merged - worker cleanup, UserInfo, progress display with full test coverage",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-23T11:14:26.815652307+01:00",
+      "updated_at": "2026-01-23T11:14:26.815652307+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"commit\":\"bef8b37\",\"confidence\":100}"
     }
   ],
   "edges": [
@@ -6117,6 +6326,182 @@
       "weight": 1.0,
       "rationale": "All tests pass, committed and pushed",
       "created_at": "2026-01-23T10:53:31.785166692+01:00"
+    },
+    {
+      "id": 249,
+      "from_node_id": 294,
+      "to_node_id": 309,
+      "from_change_id": "e4ae00b4-cc98-4010-941a-10b400a3e58c",
+      "to_change_id": "7e801c3b-9479-4166-bd93-0140a7335ba7",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Requirements preparation",
+      "created_at": "2026-01-23T11:02:15.867148838+01:00"
+    },
+    {
+      "id": 250,
+      "from_node_id": 294,
+      "to_node_id": 310,
+      "from_change_id": "e4ae00b4-cc98-4010-941a-10b400a3e58c",
+      "to_change_id": "9c68c7bb-5109-4fea-a9ab-457fb82a4b81",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Specification document",
+      "created_at": "2026-01-23T11:02:22.592164587+01:00"
+    },
+    {
+      "id": 251,
+      "from_node_id": 294,
+      "to_node_id": 311,
+      "from_change_id": "e4ae00b4-cc98-4010-941a-10b400a3e58c",
+      "to_change_id": "983bab53-0910-47a7-bd1f-f1298d874f94",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Implementation",
+      "created_at": "2026-01-23T11:02:29.081569994+01:00"
+    },
+    {
+      "id": 252,
+      "from_node_id": 300,
+      "to_node_id": 312,
+      "from_change_id": "d15aba6b-c301-4d38-8a86-f8a76545df9f",
+      "to_change_id": "0e06f8a8-c904-46e1-bae5-c4b27147bc00",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Implementation",
+      "created_at": "2026-01-23T11:02:36.081091284+01:00"
+    },
+    {
+      "id": 253,
+      "from_node_id": 313,
+      "to_node_id": 314,
+      "from_change_id": "019eaa7c-8af1-4e7c-893e-fc2ca6c04a9f",
+      "to_change_id": "06420f69-ad86-4559-92d6-d49924211732",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Core implementation",
+      "created_at": "2026-01-23T11:02:51.159682303+01:00"
+    },
+    {
+      "id": 254,
+      "from_node_id": 313,
+      "to_node_id": 315,
+      "from_change_id": "019eaa7c-8af1-4e7c-893e-fc2ca6c04a9f",
+      "to_change_id": "9709089d-7736-4f62-b17d-c037bdc767e6",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Integration tests",
+      "created_at": "2026-01-23T11:02:57.456658549+01:00"
+    },
+    {
+      "id": 255,
+      "from_node_id": 315,
+      "to_node_id": 316,
+      "from_change_id": "9709089d-7736-4f62-b17d-c037bdc767e6",
+      "to_change_id": "b7b6ed5a-5fd1-4645-81c3-c9ea59b6db07",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Merged to main",
+      "created_at": "2026-01-23T11:03:03.465395337+01:00"
+    },
+    {
+      "id": 256,
+      "from_node_id": 318,
+      "to_node_id": 319,
+      "from_change_id": "c9493d23-9f92-4a17-a15c-4f06fff82693",
+      "to_change_id": "a3a41a05-bdd9-482b-a701-cff9abb7fb9c",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Worker cleanup fix",
+      "created_at": "2026-01-23T11:04:44.550379654+01:00"
+    },
+    {
+      "id": 257,
+      "from_node_id": 318,
+      "to_node_id": 320,
+      "from_change_id": "c9493d23-9f92-4a17-a15c-4f06fff82693",
+      "to_change_id": "b49e22f0-8dda-47cd-922f-c65f9c6b1313",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "UserInfo enhancement",
+      "created_at": "2026-01-23T11:04:51.495410354+01:00"
+    },
+    {
+      "id": 258,
+      "from_node_id": 318,
+      "to_node_id": 321,
+      "from_change_id": "c9493d23-9f92-4a17-a15c-4f06fff82693",
+      "to_change_id": "ad952fa6-f683-4ca2-8e48-04b00ea6e020",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Progress display enhancement",
+      "created_at": "2026-01-23T11:04:58.313207806+01:00"
+    },
+    {
+      "id": 259,
+      "from_node_id": 319,
+      "to_node_id": 322,
+      "from_change_id": "a3a41a05-bdd9-482b-a701-cff9abb7fb9c",
+      "to_change_id": "9338dcb2-5f2b-4727-8bbf-b34220feecbc",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Test for worker cleanup",
+      "created_at": "2026-01-23T11:05:05.809023609+01:00"
+    },
+    {
+      "id": 260,
+      "from_node_id": 320,
+      "to_node_id": 323,
+      "from_change_id": "b49e22f0-8dda-47cd-922f-c65f9c6b1313",
+      "to_change_id": "72f8bed5-0187-40f7-abc8-bbe76ceb10d5",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Tests for UserInfo",
+      "created_at": "2026-01-23T11:08:50.371122778+01:00"
+    },
+    {
+      "id": 261,
+      "from_node_id": 321,
+      "to_node_id": 324,
+      "from_change_id": "ad952fa6-f683-4ca2-8e48-04b00ea6e020",
+      "to_change_id": "b17bd324-e472-4a1b-bd09-e4d0286845cf",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Tests for progress percentages",
+      "created_at": "2026-01-23T11:14:03.163342884+01:00"
+    },
+    {
+      "id": 262,
+      "from_node_id": 320,
+      "to_node_id": 325,
+      "from_change_id": "b49e22f0-8dda-47cd-922f-c65f9c6b1313",
+      "to_change_id": "f2798eff-d738-4e26-912e-8fec30403fe6",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Fix breaking test",
+      "created_at": "2026-01-23T11:14:11.188920654+01:00"
+    },
+    {
+      "id": 263,
+      "from_node_id": 318,
+      "to_node_id": 326,
+      "from_change_id": "c9493d23-9f92-4a17-a15c-4f06fff82693",
+      "to_change_id": "97021e29-41dc-4ef0-87cd-97fe11c84c89",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Code reviews",
+      "created_at": "2026-01-23T11:14:19.959228826+01:00"
+    },
+    {
+      "id": 264,
+      "from_node_id": 326,
+      "to_node_id": 327,
+      "from_change_id": "97021e29-41dc-4ef0-87cd-97fe11c84c89",
+      "to_change_id": "1fd22ae1-3ae6-4bc8-b117-be9caad54edb",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "PR merged",
+      "created_at": "2026-01-23T11:14:26.829347821+01:00"
     }
   ]
 }
