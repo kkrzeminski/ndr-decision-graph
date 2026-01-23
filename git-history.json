@@ -1,5 +1,13 @@
 [
   {
+    "hash": "27b3a37187904c04a2aef9995f86cb1ec2d70e5c",
+    "short_hash": "27b3a37",
+    "author": "Krzysztof Krzemiński",
+    "date": "2026-01-23T12:01:59+01:00",
+    "message": "docs: add diagnostic prompt for Issue #36 approve-all bug\n\nComprehensive analysis of the \"Approve All\" button issue:\n\nAnalysis findings:\n- Backend implementation and tests are correct (7 tests pass)\n- Endpoint requires MANAGER or ADMIN role\n- Only rows with READY status can be approved\n\nPotential causes identified:\n1. Permission issue - user lacks MANAGER/ADMIN role\n2. No rows in READY status (workflow misunderstanding)\n3. Frontend calling wrong endpoint\n4. All rows already approved\n\nPrompt includes:\n- Debugging steps with SQL queries and curl commands\n- Requirements for improved error feedback\n- Enhanced BulkOperationResponse with message field\n- Testing scenarios for edge cases\n\nRecommendation: Diagnose actual failure mode before implementing\nchanges. Backend appears correct.\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>",
+    "files_changed": 1
+  },
+  {
     "hash": "603e1d7ffc7d37e27bba17c16aa3e3ee1e9691c2",
     "short_hash": "603e1d7",
     "author": "Krzysztof Krzemiński",
