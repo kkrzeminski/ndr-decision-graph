@@ -3772,6 +3772,83 @@
       "created_at": "2026-01-24T18:17:28.302113554+01:00",
       "updated_at": "2026-01-24T18:17:28.302113554+01:00",
       "metadata_json": "{\"branch\":\"main\",\"confidence\":95}"
+    },
+    {
+      "id": 344,
+      "change_id": "21467268-68ee-408b-aa2b-cf4eaae4e649",
+      "node_type": "goal",
+      "title": "Review pending PRs #10 and #11",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-27T10:54:28.852153155+01:00",
+      "updated_at": "2026-01-27T10:54:28.852153155+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":90,\"prompt\":\"User asked: Please review pending PR\"}"
+    },
+    {
+      "id": 345,
+      "change_id": "ac98f68b-8c75-4d84-9528-e62950524808",
+      "node_type": "action",
+      "title": "Reviewing PR #11 feat/extend-assignment-permissions (5 commits, 11 files)",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-27T10:54:28.867408743+01:00",
+      "updated_at": "2026-01-27T10:54:28.867408743+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":85}"
+    },
+    {
+      "id": 346,
+      "change_id": "61266f7d-7970-47b8-8e25-0c463f585b06",
+      "node_type": "outcome",
+      "title": "PR #11 review complete: 2 critical issues (missing DTO, breaking constructor), 4 design concerns, 3 minor issues",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-27T10:55:08.835631038+01:00",
+      "updated_at": "2026-01-27T10:55:08.835631038+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":95}"
+    },
+    {
+      "id": 347,
+      "change_id": "b023fb25-153d-433a-b59a-d5b14e747450",
+      "node_type": "action",
+      "title": "Reviewing 2 new commits on PR #11: missing DTO added, LEAD_AUDITOR/TEAM_MEMBERS group sources",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-27T11:21:31.995731694+01:00",
+      "updated_at": "2026-01-27T11:21:31.995731694+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":85}"
+    },
+    {
+      "id": 348,
+      "change_id": "85413d6d-4e4a-4ce3-8f14-d4d03ba5f9ca",
+      "node_type": "outcome",
+      "title": "Updated review: critical DTO issue fixed, 1 new medium issue (equals/hashCode), PR scope grew to 5 concerns",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-27T11:22:01.090944227+01:00",
+      "updated_at": "2026-01-27T11:22:01.090944227+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":95}"
+    },
+    {
+      "id": 349,
+      "change_id": "5e565a29-7cda-4350-99cc-6d2f22f68d5d",
+      "node_type": "action",
+      "title": "Reviewing 3 new commits on feat/extend-assignment-permissions: expanded summaries, ACTIVE filter, notification module",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-31T17:54:29.173156385+01:00",
+      "updated_at": "2026-01-31T17:54:29.173156385+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":90}"
+    },
+    {
+      "id": 350,
+      "change_id": "e71591d1-e924-420e-8409-badbc57c7e6c",
+      "node_type": "outcome",
+      "title": "Round 3 review complete: 14 new issues found (1 critical - notification auth, 5 medium, 6 low, 2 design). Total issues: 25 across 10 commits.",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-01-31T17:54:37.066082834+01:00",
+      "updated_at": "2026-01-31T17:54:37.066082834+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":95}"
     }
   ],
   "edges": [
@@ -6799,6 +6876,72 @@
       "weight": 1.0,
       "rationale": "Implementation complete",
       "created_at": "2026-01-24T18:17:28.328328522+01:00"
+    },
+    {
+      "id": 276,
+      "from_node_id": 344,
+      "to_node_id": 345,
+      "from_change_id": "21467268-68ee-408b-aa2b-cf4eaae4e649",
+      "to_change_id": "ac98f68b-8c75-4d84-9528-e62950524808",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Review action for PRs goal",
+      "created_at": "2026-01-27T10:54:32.411602033+01:00"
+    },
+    {
+      "id": 277,
+      "from_node_id": 345,
+      "to_node_id": 346,
+      "from_change_id": "ac98f68b-8c75-4d84-9528-e62950524808",
+      "to_change_id": "61266f7d-7970-47b8-8e25-0c463f585b06",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Review completed",
+      "created_at": "2026-01-27T10:55:08.849174376+01:00"
+    },
+    {
+      "id": 278,
+      "from_node_id": 344,
+      "to_node_id": 347,
+      "from_change_id": "21467268-68ee-408b-aa2b-cf4eaae4e649",
+      "to_change_id": "b023fb25-153d-433a-b59a-d5b14e747450",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Follow-up review of new commits",
+      "created_at": "2026-01-27T11:21:32.007932750+01:00"
+    },
+    {
+      "id": 279,
+      "from_node_id": 347,
+      "to_node_id": 348,
+      "from_change_id": "b023fb25-153d-433a-b59a-d5b14e747450",
+      "to_change_id": "85413d6d-4e4a-4ce3-8f14-d4d03ba5f9ca",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Follow-up review completed",
+      "created_at": "2026-01-27T11:22:01.104198840+01:00"
+    },
+    {
+      "id": 280,
+      "from_node_id": 344,
+      "to_node_id": 349,
+      "from_change_id": "21467268-68ee-408b-aa2b-cf4eaae4e649",
+      "to_change_id": "5e565a29-7cda-4350-99cc-6d2f22f68d5d",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Continuation of PR review",
+      "created_at": "2026-01-31T17:54:37.082416872+01:00"
+    },
+    {
+      "id": 281,
+      "from_node_id": 349,
+      "to_node_id": 350,
+      "from_change_id": "5e565a29-7cda-4350-99cc-6d2f22f68d5d",
+      "to_change_id": "e71591d1-e924-420e-8409-badbc57c7e6c",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Review produced findings",
+      "created_at": "2026-01-31T17:54:37.095882903+01:00"
     }
   ]
 }
