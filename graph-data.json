@@ -4080,6 +4080,72 @@
       "created_at": "2026-02-03T19:51:00.369092938+01:00",
       "updated_at": "2026-02-03T19:51:00.369092938+01:00",
       "metadata_json": "{\"branch\":\"main\",\"confidence\":100}"
+    },
+    {
+      "id": 372,
+      "change_id": "273eb0bb-ea04-4574-8dc4-b4926aeb376b",
+      "node_type": "goal",
+      "title": "Review 3 open PRs (#14, #15, #16) and save reports",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-04T21:21:50.573749445+01:00",
+      "updated_at": "2026-02-04T21:21:50.573749445+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":90,\"prompt\":\"User asked: check PR and review them and save report to review folder\"}"
+    },
+    {
+      "id": 373,
+      "change_id": "8c8dba62-bf94-4db7-bbb6-ec39b0dd4222",
+      "node_type": "action",
+      "title": "Reviewed 3 PRs (#14, #15, #16) and wrote reports to review/",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-04T21:29:40.486198693+01:00",
+      "updated_at": "2026-02-04T21:29:40.486198693+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":95}"
+    },
+    {
+      "id": 374,
+      "change_id": "2809c938-3c6a-49b0-aec1-d734acac2ee0",
+      "node_type": "outcome",
+      "title": "Reports saved: PR-14 (11 issues, COMMENT), PR-15 (10 issues, 2 critical, REQUEST CHANGES), PR-16 (20 issues, 3 critical, REQUEST CHANGES)",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-04T21:29:40.500393222+01:00",
+      "updated_at": "2026-02-04T21:29:40.500393222+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":95}"
+    },
+    {
+      "id": 375,
+      "change_id": "1ae71998-3efa-4efa-a97c-42ba431a0449",
+      "node_type": "action",
+      "title": "Implementing M2: replace silent JSON parse error handling with thrown ValidationException in ScreensSummaryService and ApplicationsSummaryService",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-04T21:37:27.717776969+01:00",
+      "updated_at": "2026-02-04T21:37:27.717776969+01:00",
+      "metadata_json": "{\"branch\":\"feat/project-deadline\",\"confidence\":90}"
+    },
+    {
+      "id": 376,
+      "change_id": "682f191d-5275-44bb-bec3-df68f66a8066",
+      "node_type": "action",
+      "title": "Implementing L1: writing integration tests for PATCH /projects/{id}, screens-summary, and applications-summary endpoints",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-04T21:42:34.743518149+01:00",
+      "updated_at": "2026-02-04T21:42:34.743518149+01:00",
+      "metadata_json": "{\"branch\":\"feat/project-deadline\",\"confidence\":85}"
+    },
+    {
+      "id": 377,
+      "change_id": "c7161dc5-a0d7-4bde-8154-8cd51db6fe8e",
+      "node_type": "outcome",
+      "title": "M2 and L1 implemented: ValidationException on parse errors + 12 integration tests (all passing)",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-04T21:47:34.285419516+01:00",
+      "updated_at": "2026-02-04T21:47:34.285419516+01:00",
+      "metadata_json": "{\"branch\":\"feat/project-deadline\",\"confidence\":95}"
     }
   ],
   "edges": [
@@ -7371,6 +7437,61 @@
       "weight": 1.0,
       "rationale": "Fix committed and pushed",
       "created_at": "2026-02-03T19:51:09.069787265+01:00"
+    },
+    {
+      "id": 300,
+      "from_node_id": 372,
+      "to_node_id": 373,
+      "from_change_id": "273eb0bb-ea04-4574-8dc4-b4926aeb376b",
+      "to_change_id": "8c8dba62-bf94-4db7-bbb6-ec39b0dd4222",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Review goal led to review action",
+      "created_at": "2026-02-04T21:29:45.957508814+01:00"
+    },
+    {
+      "id": 301,
+      "from_node_id": 373,
+      "to_node_id": 374,
+      "from_change_id": "8c8dba62-bf94-4db7-bbb6-ec39b0dd4222",
+      "to_change_id": "2809c938-3c6a-49b0-aec1-d734acac2ee0",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Reviews completed with findings",
+      "created_at": "2026-02-04T21:29:45.970832160+01:00"
+    },
+    {
+      "id": 302,
+      "from_node_id": 372,
+      "to_node_id": 375,
+      "from_change_id": "273eb0bb-ea04-4574-8dc4-b4926aeb376b",
+      "to_change_id": "1ae71998-3efa-4efa-a97c-42ba431a0449",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Review goal led to M2 fix",
+      "created_at": "2026-02-04T21:47:34.297154412+01:00"
+    },
+    {
+      "id": 303,
+      "from_node_id": 375,
+      "to_node_id": 376,
+      "from_change_id": "1ae71998-3efa-4efa-a97c-42ba431a0449",
+      "to_change_id": "682f191d-5275-44bb-bec3-df68f66a8066",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "M2 fix followed by L1 tests",
+      "created_at": "2026-02-04T21:47:34.311851878+01:00"
+    },
+    {
+      "id": 304,
+      "from_node_id": 376,
+      "to_node_id": 377,
+      "from_change_id": "682f191d-5275-44bb-bec3-df68f66a8066",
+      "to_change_id": "c7161dc5-a0d7-4bde-8154-8cd51db6fe8e",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Tests implemented and passing",
+      "created_at": "2026-02-04T21:47:34.323768941+01:00"
     }
   ]
 }
