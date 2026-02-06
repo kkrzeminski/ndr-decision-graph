@@ -4234,6 +4234,116 @@
       "created_at": "2026-02-05T20:20:54.074438929+01:00",
       "updated_at": "2026-02-05T20:20:54.074438929+01:00",
       "metadata_json": "{\"branch\":\"feat/cell-patterns\",\"confidence\":95}"
+    },
+    {
+      "id": 386,
+      "change_id": "52cfba3d-88f6-42be-873b-deb50ad0fdd5",
+      "node_type": "goal",
+      "title": "Spring Boot 4.x migration - fix Jackson 3 and dependency compatibility",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-06T17:27:14.846903475+01:00",
+      "updated_at": "2026-02-06T17:27:14.846903475+01:00",
+      "metadata_json": "{\"branch\":\"feature/spring-boot-4.0.x-migration\",\"confidence\":85,\"prompt\":\"User asked: switch to spring-boot-4 branch, merge main, perform Zalando→ProblemDetail refactor, fix all Jackson 3 issues\"}"
+    },
+    {
+      "id": 387,
+      "change_id": "64f11c49-f50d-4103-8710-ea2ec5920f01",
+      "node_type": "outcome",
+      "title": "Merged main, replaced Zalando Problem with ProblemDetail (37 handlers)",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-06T17:27:19.164720651+01:00",
+      "updated_at": "2026-02-06T17:27:19.164720651+01:00",
+      "metadata_json": "{\"branch\":\"feature/spring-boot-4.0.x-migration\",\"confidence\":95}"
+    },
+    {
+      "id": 388,
+      "change_id": "03eadec7-4371-45dc-977d-6f5251112e86",
+      "node_type": "outcome",
+      "title": "Upgraded Logbook 3.12→4.0.1, fixed MockBean→MockitoBean, forbidden API violations",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-06T17:27:20.796160923+01:00",
+      "updated_at": "2026-02-06T17:27:20.796160923+01:00",
+      "metadata_json": "{\"branch\":\"feature/spring-boot-4.0.x-migration\",\"confidence\":95}"
+    },
+    {
+      "id": 389,
+      "change_id": "eb71800b-86c7-46d4-bb99-2b03615d9e36",
+      "node_type": "outcome",
+      "title": "Fixed all Jackson 2→3 imports across 9 files (ObjectMapper, JsonNode, JacksonException)",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-06T17:27:22.256499234+01:00",
+      "updated_at": "2026-02-06T17:27:22.256499234+01:00",
+      "metadata_json": "{\"branch\":\"feature/spring-boot-4.0.x-migration\",\"confidence\":95}"
+    },
+    {
+      "id": 390,
+      "change_id": "6ee8b97f-2999-40ad-a040-d78dddaabcc5",
+      "node_type": "outcome",
+      "title": "Added NoArgsConstructor+AllArgsConstructor to 14 DTOs, boxed primitives in RestResponsePage helpers",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-06T17:27:23.862094422+01:00",
+      "updated_at": "2026-02-06T17:27:23.862094422+01:00",
+      "metadata_json": "{\"branch\":\"feature/spring-boot-4.0.x-migration\",\"confidence\":95}"
+    },
+    {
+      "id": 391,
+      "change_id": "5c4ee5a6-e30f-46e4-8e88-6b5b20e54a6f",
+      "node_type": "observation",
+      "title": "Jackson 3 key breaking changes: 1) package com.fasterxml.jackson.databind→tools.jackson.databind (annotations stay com.fasterxml) 2) no auto-discover of @Builder constructors 3) FAIL_ON_NULL_FOR_PRIMITIVES defaults true",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-06T17:27:28.544812682+01:00",
+      "updated_at": "2026-02-06T17:27:28.544812682+01:00",
+      "metadata_json": "{\"branch\":\"feature/spring-boot-4.0.x-migration\",\"confidence\":95}"
+    },
+    {
+      "id": 392,
+      "change_id": "7ea9230f-db60-4dd1-be43-2f308b72cbca",
+      "node_type": "goal",
+      "title": "Fix ProjectInformationRequestControllerIntegrationTest 403 Forbidden",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-06T18:04:36.247709580+01:00",
+      "updated_at": "2026-02-06T18:04:36.247709580+01:00",
+      "metadata_json": "{\"branch\":\"feature/spring-boot-4.0.x-migration\",\"confidence\":80,\"prompt\":\"User asked: fix shouldWorkWithUserRole() getting 403 Access Denied on /api/projects/{id}/information-requests\"}"
+    },
+    {
+      "id": 393,
+      "change_id": "c904dfaa-d149-452a-8d99-8494b2b81a7f",
+      "node_type": "outcome",
+      "title": "Fixed 403 by adding project worker assignment for ROLE_USER in test setUp",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-06T18:17:40.821401438+01:00",
+      "updated_at": "2026-02-06T18:17:40.821401438+01:00",
+      "metadata_json": "{\"branch\":\"feature/spring-boot-4.0.x-migration\",\"confidence\":95}"
+    },
+    {
+      "id": 394,
+      "change_id": "31e832d4-c4bf-4e17-b03c-3def17ef291e",
+      "node_type": "goal",
+      "title": "Fix InformationRequestPublicControllerIntegrationTest multipart submit failures",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-06T18:33:56.279635810+01:00",
+      "updated_at": "2026-02-06T18:33:56.279635810+01:00",
+      "metadata_json": "{\"branch\":\"feature/spring-boot-4.0.x-migration\",\"confidence\":95,\"prompt\":\"User asked: fix 4 submitFiles tests returning empty attachments/comments\"}"
+    },
+    {
+      "id": 395,
+      "change_id": "877aef15-c7b6-46a4-8cf7-5a2b482cc7ac",
+      "node_type": "observation",
+      "title": "RestClient in Spring 7 sends multipart form data params as null - switched to MockMvc for multipart tests. Also context-path /api must be excluded from MockMvc paths.",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-06T18:33:56.293818648+01:00",
+      "updated_at": "2026-02-06T18:33:56.293818648+01:00",
+      "metadata_json": "{\"branch\":\"feature/spring-boot-4.0.x-migration\",\"confidence\":95}"
     }
   ],
   "edges": [
@@ -7657,6 +7767,94 @@
       "weight": 1.0,
       "rationale": "All requested review issues implemented and pushed",
       "created_at": "2026-02-05T20:20:57.719786471+01:00"
+    },
+    {
+      "id": 312,
+      "from_node_id": 386,
+      "to_node_id": 387,
+      "from_change_id": "52cfba3d-88f6-42be-873b-deb50ad0fdd5",
+      "to_change_id": "64f11c49-f50d-4103-8710-ea2ec5920f01",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Merge and ProblemDetail refactor completed (bb782ea, a02e059)",
+      "created_at": "2026-02-06T17:27:19.177534408+01:00"
+    },
+    {
+      "id": 313,
+      "from_node_id": 386,
+      "to_node_id": 388,
+      "from_change_id": "52cfba3d-88f6-42be-873b-deb50ad0fdd5",
+      "to_change_id": "03eadec7-4371-45dc-977d-6f5251112e86",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Dependency and API compatibility fixes (c5977d0)",
+      "created_at": "2026-02-06T17:27:20.812538578+01:00"
+    },
+    {
+      "id": 314,
+      "from_node_id": 386,
+      "to_node_id": 389,
+      "from_change_id": "52cfba3d-88f6-42be-873b-deb50ad0fdd5",
+      "to_change_id": "eb71800b-86c7-46d4-bb99-2b03615d9e36",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Jackson package migration (7063635)",
+      "created_at": "2026-02-06T17:27:22.270549248+01:00"
+    },
+    {
+      "id": 315,
+      "from_node_id": 386,
+      "to_node_id": 390,
+      "from_change_id": "52cfba3d-88f6-42be-873b-deb50ad0fdd5",
+      "to_change_id": "6ee8b97f-2999-40ad-a040-d78dddaabcc5",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Jackson 3 deserialization fixes (f42f955)",
+      "created_at": "2026-02-06T17:27:23.873639461+01:00"
+    },
+    {
+      "id": 316,
+      "from_node_id": 386,
+      "to_node_id": 391,
+      "from_change_id": "52cfba3d-88f6-42be-873b-deb50ad0fdd5",
+      "to_change_id": "5c4ee5a6-e30f-46e4-8e88-6b5b20e54a6f",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Key lessons from Jackson 3 migration",
+      "created_at": "2026-02-06T17:27:28.556991942+01:00"
+    },
+    {
+      "id": 317,
+      "from_node_id": 392,
+      "to_node_id": 393,
+      "from_change_id": "7ea9230f-db60-4dd1-be43-2f308b72cbca",
+      "to_change_id": "c904dfaa-d149-452a-8d99-8494b2b81a7f",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Test fix committed as c17f321",
+      "created_at": "2026-02-06T18:17:40.836001496+01:00"
+    },
+    {
+      "id": 318,
+      "from_node_id": 386,
+      "to_node_id": 394,
+      "from_change_id": "52cfba3d-88f6-42be-873b-deb50ad0fdd5",
+      "to_change_id": "31e832d4-c4bf-4e17-b03c-3def17ef291e",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Part of Spring Boot 4 migration",
+      "created_at": "2026-02-06T18:33:56.306834440+01:00"
+    },
+    {
+      "id": 319,
+      "from_node_id": 394,
+      "to_node_id": 395,
+      "from_change_id": "31e832d4-c4bf-4e17-b03c-3def17ef291e",
+      "to_change_id": "877aef15-c7b6-46a4-8cf7-5a2b482cc7ac",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Root cause analysis",
+      "created_at": "2026-02-06T18:33:56.319448098+01:00"
     }
   ]
 }
