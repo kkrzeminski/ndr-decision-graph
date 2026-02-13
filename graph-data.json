@@ -4674,6 +4674,116 @@
       "created_at": "2026-02-10T21:05:19.510398910+01:00",
       "updated_at": "2026-02-10T21:05:19.510398910+01:00",
       "metadata_json": "{\"branch\":\"main\",\"confidence\":95}"
+    },
+    {
+      "id": 426,
+      "change_id": "1b22a866-0192-406b-9491-cb43553c7e93",
+      "node_type": "goal",
+      "title": "Review PR #25 - fix project comments query issues with PostgreSQL",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-11T15:15:12.743305174+01:00",
+      "updated_at": "2026-02-11T15:15:12.743305174+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":95,\"prompt\":\"User asked: please review PR #25\"}"
+    },
+    {
+      "id": 427,
+      "change_id": "33c931ec-cee8-4fbf-9974-dd717e559910",
+      "node_type": "action",
+      "title": "Reviewed PR #25 diff: 3 files, +19/-24. Analyzed DTO rename, query rewrite, sort handling, and count query changes",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-11T15:15:21.825089851+01:00",
+      "updated_at": "2026-02-11T15:15:21.825089851+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":95}"
+    },
+    {
+      "id": 428,
+      "change_id": "c840542a-3373-49b6-93f0-cc41113c9697",
+      "node_type": "outcome",
+      "title": "PR #25 reviewed: REQUEST CHANGES. 1 critical (displayName→username semantic mismatch + breaking API), 1 medium (Sort.unsorted silently discards user sort param), 2 low (COALESCE readability, missing countQuery)",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-11T15:15:21.840837020+01:00",
+      "updated_at": "2026-02-11T15:15:21.840837020+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":95}"
+    },
+    {
+      "id": 429,
+      "change_id": "0da3be01-19f7-4450-a43d-f3134721a739",
+      "node_type": "observation",
+      "title": "PR author replaced JOIN FETCH with @EntityGraph and COALESCE for date filters - both valid techniques but introduced regressions: breaking field rename, sort contract violation",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-11T15:15:21.855308455+01:00",
+      "updated_at": "2026-02-11T15:15:21.855308455+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":90}"
+    },
+    {
+      "id": 430,
+      "change_id": "75237256-4dd3-4798-98be-7b163f61b776",
+      "node_type": "goal",
+      "title": "Switch integration tests from H2 to Testcontainers PostgreSQL",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-13T14:25:18.075205651+01:00",
+      "updated_at": "2026-02-13T14:25:18.075205651+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":100,\"prompt\":\"User asked: Eliminate H2/PostgreSQL mismatch by running integration tests against real PostgreSQL via Testcontainers, then fix PR #25 issues\"}"
+    },
+    {
+      "id": 431,
+      "change_id": "f918f38d-9aee-4c72-aeeb-ad93ae33bbfa",
+      "node_type": "action",
+      "title": "Replace H2 with Testcontainers PostgreSQL 16 in integration test config",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-13T14:25:23.789157117+01:00",
+      "updated_at": "2026-02-13T14:25:23.789157117+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":100}"
+    },
+    {
+      "id": 432,
+      "change_id": "e67f7b33-6f7f-46b6-ba81-790e48a48f34",
+      "node_type": "action",
+      "title": "Fix RowCommentRepository nullable param CAST for PostgreSQL compatibility",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-13T14:25:23.806226769+01:00",
+      "updated_at": "2026-02-13T14:25:23.806226769+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":100}"
+    },
+    {
+      "id": 433,
+      "change_id": "6af4ae4f-3370-4060-8e49-5e6a91855c5a",
+      "node_type": "action",
+      "title": "Remove H2 dependency, add PostgreSQL driver for integration runtime",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-13T14:25:23.820421261+01:00",
+      "updated_at": "2026-02-13T14:25:23.820421261+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":100}"
+    },
+    {
+      "id": 434,
+      "change_id": "40d628df-3fef-4ead-9f6e-b229fc356518",
+      "node_type": "outcome",
+      "title": "All integration tests pass on real PostgreSQL 16 via Testcontainers. PR #35 merged to main. PR #26 closed as superseded.",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-13T14:25:29.618553923+01:00",
+      "updated_at": "2026-02-13T14:25:29.618553923+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":100}"
+    },
+    {
+      "id": 435,
+      "change_id": "464b96ce-35cc-40ef-802d-509221a56546",
+      "node_type": "observation",
+      "title": "PostgreSQL cannot determine parameter types in (:param IS NULL OR col = :param) pattern. Fix: CAST(:param AS type) IS NULL. JPQL types: string, long, localdatetime.",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-13T14:25:29.632889689+01:00",
+      "updated_at": "2026-02-13T14:25:29.632889689+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":100}"
     }
   ],
   "edges": [
@@ -8405,6 +8515,127 @@
       "weight": 1.0,
       "rationale": "PR #15 merged granting role access",
       "created_at": "2026-02-10T21:05:28.252322218+01:00"
+    },
+    {
+      "id": 340,
+      "from_node_id": 426,
+      "to_node_id": 427,
+      "from_change_id": "1b22a866-0192-406b-9491-cb43553c7e93",
+      "to_change_id": "33c931ec-cee8-4fbf-9974-dd717e559910",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Review action for PR #25",
+      "created_at": "2026-02-11T15:15:29.606078693+01:00"
+    },
+    {
+      "id": 341,
+      "from_node_id": 427,
+      "to_node_id": 428,
+      "from_change_id": "33c931ec-cee8-4fbf-9974-dd717e559910",
+      "to_change_id": "c840542a-3373-49b6-93f0-cc41113c9697",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Review completed with REQUEST CHANGES verdict",
+      "created_at": "2026-02-11T15:15:29.618419406+01:00"
+    },
+    {
+      "id": 342,
+      "from_node_id": 427,
+      "to_node_id": 429,
+      "from_change_id": "33c931ec-cee8-4fbf-9974-dd717e559910",
+      "to_change_id": "0da3be01-19f7-4450-a43d-f3134721a739",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Observation from reviewing query changes",
+      "created_at": "2026-02-11T15:15:29.633838426+01:00"
+    },
+    {
+      "id": 343,
+      "from_node_id": 430,
+      "to_node_id": 431,
+      "from_change_id": "75237256-4dd3-4798-98be-7b163f61b776",
+      "to_change_id": "f918f38d-9aee-4c72-aeeb-ad93ae33bbfa",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Config change for Testcontainers",
+      "created_at": "2026-02-13T14:25:35.676828089+01:00"
+    },
+    {
+      "id": 344,
+      "from_node_id": 430,
+      "to_node_id": 432,
+      "from_change_id": "75237256-4dd3-4798-98be-7b163f61b776",
+      "to_change_id": "e67f7b33-6f7f-46b6-ba81-790e48a48f34",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Query fix discovered by running on real PostgreSQL",
+      "created_at": "2026-02-13T14:25:35.688988129+01:00"
+    },
+    {
+      "id": 345,
+      "from_node_id": 430,
+      "to_node_id": 433,
+      "from_change_id": "75237256-4dd3-4798-98be-7b163f61b776",
+      "to_change_id": "6af4ae4f-3370-4060-8e49-5e6a91855c5a",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Dependency cleanup",
+      "created_at": "2026-02-13T14:25:35.703399310+01:00"
+    },
+    {
+      "id": 346,
+      "from_node_id": 431,
+      "to_node_id": 434,
+      "from_change_id": "f918f38d-9aee-4c72-aeeb-ad93ae33bbfa",
+      "to_change_id": "40d628df-3fef-4ead-9f6e-b229fc356518",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Tests pass after all changes",
+      "created_at": "2026-02-13T14:25:35.715482657+01:00"
+    },
+    {
+      "id": 347,
+      "from_node_id": 432,
+      "to_node_id": 434,
+      "from_change_id": "e67f7b33-6f7f-46b6-ba81-790e48a48f34",
+      "to_change_id": "40d628df-3fef-4ead-9f6e-b229fc356518",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "CAST fix resolved query failures",
+      "created_at": "2026-02-13T14:25:35.727867778+01:00"
+    },
+    {
+      "id": 348,
+      "from_node_id": 433,
+      "to_node_id": 434,
+      "from_change_id": "6af4ae4f-3370-4060-8e49-5e6a91855c5a",
+      "to_change_id": "40d628df-3fef-4ead-9f6e-b229fc356518",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Build compiles without H2",
+      "created_at": "2026-02-13T14:25:35.740272068+01:00"
+    },
+    {
+      "id": 349,
+      "from_node_id": 432,
+      "to_node_id": 435,
+      "from_change_id": "e67f7b33-6f7f-46b6-ba81-790e48a48f34",
+      "to_change_id": "464b96ce-35cc-40ef-802d-509221a56546",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Key learning about PostgreSQL parameter typing",
+      "created_at": "2026-02-13T14:25:35.752505255+01:00"
+    },
+    {
+      "id": 350,
+      "from_node_id": 426,
+      "to_node_id": 430,
+      "from_change_id": "1b22a866-0192-406b-9491-cb43553c7e93",
+      "to_change_id": "75237256-4dd3-4798-98be-7b163f61b776",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "PR #25 review led to root cause: H2/PostgreSQL mismatch",
+      "created_at": "2026-02-13T14:25:35.764358379+01:00"
     }
   ]
 }
