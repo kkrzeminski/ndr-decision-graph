@@ -4784,6 +4784,50 @@
       "created_at": "2026-02-13T14:25:29.632889689+01:00",
       "updated_at": "2026-02-13T14:25:29.632889689+01:00",
       "metadata_json": "{\"branch\":\"main\",\"confidence\":100}"
+    },
+    {
+      "id": 436,
+      "change_id": "cd5b8086-5cab-4e54-8b20-46ca1b036fbb",
+      "node_type": "goal",
+      "title": "Add Claude Code skills: /quality, /review-pr, /pr-check",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-17T20:28:47.502864606+01:00",
+      "updated_at": "2026-02-17T20:28:47.502864606+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":100,\"prompt\":\"User asked: propose and implement skills for the project - started with quality, review-pr, pr-check\"}"
+    },
+    {
+      "id": 437,
+      "change_id": "3916169b-d22a-48e7-af56-004a90705578",
+      "node_type": "outcome",
+      "title": "Three skills created and committed: /quality (full sweep), /review-pr (deep PR review), /pr-check (quick validation)",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-17T20:28:47.517549264+01:00",
+      "updated_at": "2026-02-17T20:28:47.517549264+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":100}"
+    },
+    {
+      "id": 438,
+      "change_id": "ff7737b9-68e2-4eaf-a9d2-12c91a1cc852",
+      "node_type": "goal",
+      "title": "Prepare test environment deployment with Docker",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-17T20:28:47.532292818+01:00",
+      "updated_at": "2026-02-17T20:28:47.532292818+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":100,\"prompt\":\"User asked: prepare docker compose for test env with postgres, spring boot, react on nginx. Deploy via shared folders on Ubuntu 22.04.5\"}"
+    },
+    {
+      "id": 439,
+      "change_id": "473d6308-b69c-4f35-b5e5-af280c4e8c74",
+      "node_type": "outcome",
+      "title": "Deployment files created: docker-compose.test.yml, .env.test, nginx/default.conf, SERVER_SETUP.md. Committed and pushed.",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-17T20:28:47.545942725+01:00",
+      "updated_at": "2026-02-17T20:28:47.545942725+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":100}"
     }
   ],
   "edges": [
@@ -8636,6 +8680,28 @@
       "weight": 1.0,
       "rationale": "PR #25 review led to root cause: H2/PostgreSQL mismatch",
       "created_at": "2026-02-13T14:25:35.764358379+01:00"
+    },
+    {
+      "id": 351,
+      "from_node_id": 436,
+      "to_node_id": 437,
+      "from_change_id": "cd5b8086-5cab-4e54-8b20-46ca1b036fbb",
+      "to_change_id": "3916169b-d22a-48e7-af56-004a90705578",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Skills created and committed",
+      "created_at": "2026-02-17T20:28:53.952348290+01:00"
+    },
+    {
+      "id": 352,
+      "from_node_id": 438,
+      "to_node_id": 439,
+      "from_change_id": "ff7737b9-68e2-4eaf-a9d2-12c91a1cc852",
+      "to_change_id": "473d6308-b69c-4f35-b5e5-af280c4e8c74",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Deployment files created and pushed",
+      "created_at": "2026-02-17T20:28:53.965685510+01:00"
     }
   ]
 }
