@@ -5125,6 +5125,160 @@
       "created_at": "2026-02-19T12:31:39.337976775+01:00",
       "updated_at": "2026-02-19T12:31:39.337976775+01:00",
       "metadata_json": "{\"branch\":\"main\",\"confidence\":95}"
+    },
+    {
+      "id": 467,
+      "change_id": "4700004f-9561-4fdd-8ed4-b54cfb2cad17",
+      "node_type": "goal",
+      "title": "Implement email adapter pattern on feat/email-service branch",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-19T20:21:38.847598950+01:00",
+      "updated_at": "2026-02-19T20:21:38.847598950+01:00",
+      "metadata_json": "{\"branch\":\"feat/email-service\",\"confidence\":95,\"prompt\":\"User asked to wrap external systems in adapter pattern, start with email. Decided to implement directly on feat/email-service to avoid merge conflicts.\"}"
+    },
+    {
+      "id": 468,
+      "change_id": "6868023b-abfa-4919-9daa-c0d0ed4306ed",
+      "node_type": "action",
+      "title": "Refactored email services into adapter/email/ package with @Profile-based selection",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-19T20:21:45.258781819+01:00",
+      "updated_at": "2026-02-19T20:21:45.258781819+01:00",
+      "metadata_json": "{\"branch\":\"feat/email-service\",\"confidence\":95}"
+    },
+    {
+      "id": 469,
+      "change_id": "7610773d-a00b-46b6-a872-e36eca46629e",
+      "node_type": "outcome",
+      "title": "Commit 959065a: SmtpEmailAdapter (@Profile prod), MockEmailAdapter (@Profile dev/integration), EmailDeliveryException, EmailTemplateService fixed (Clock injection, LocalDate.now, IllegalArgumentException, Locale.ROOT). JacksonConfig DateTimeFormatter fixed. spring.profiles.active defaults to dev. All tests pass.",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-19T20:21:45.272238809+01:00",
+      "updated_at": "2026-02-19T20:21:45.272238809+01:00",
+      "metadata_json": "{\"branch\":\"feat/email-service\",\"confidence\":98}"
+    },
+    {
+      "id": 470,
+      "change_id": "6199a519-b50a-46ff-9060-961c1d7af3bf",
+      "node_type": "goal",
+      "title": "Wrap KRS API and Office 365 into adapter pattern with mock implementations",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-19T20:24:48.630503713+01:00",
+      "updated_at": "2026-02-19T20:24:48.630503713+01:00",
+      "metadata_json": "{\"branch\":\"feat/email-service\",\"confidence\":95,\"prompt\":\"User said: yes go ahead. Plan: KRS adapter first (KrsApiPort interface, KrsApiAdapter @prod, MockKrsAdapter @dev/integration), then Storage adapter (FileStoragePort, Office365StorageAdapter @prod, LocalStorageAdapter @dev/integration).\"}"
+    },
+    {
+      "id": 471,
+      "change_id": "42d9412d-e02c-4eae-9eb3-e8875211eb79",
+      "node_type": "action",
+      "title": "Created KRS and Storage adapters with mock implementations",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-19T21:08:35.754903843+01:00",
+      "updated_at": "2026-02-19T21:08:35.754903843+01:00",
+      "metadata_json": "{\"branch\":\"feat/email-service\",\"confidence\":95}"
+    },
+    {
+      "id": 472,
+      "change_id": "c102900e-0b96-4a5a-98a7-ebf2a0a2a29d",
+      "node_type": "outcome",
+      "title": "Commit a3d0c2d: KrsApiPort+KrsApiAdapter(@prod)+MockKrsAdapter(@dev/integration), FileStoragePort+StorageFileMetadata+Office365StorageAdapter(@prod)+LocalStorageAdapter(@dev/integration). All consumers updated. All tests pass.",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-19T21:08:35.767938250+01:00",
+      "updated_at": "2026-02-19T21:08:35.767938250+01:00",
+      "metadata_json": "{\"branch\":\"feat/email-service\",\"confidence\":98}"
+    },
+    {
+      "id": 473,
+      "change_id": "0d66163e-a3ae-44f3-9ef0-7c52914ff09f",
+      "node_type": "goal",
+      "title": "Fix PR review issues: N+1 query, stream leak, integration tests",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-20T12:30:16.663523534+01:00",
+      "updated_at": "2026-02-20T12:30:16.663523534+01:00",
+      "metadata_json": "{\"branch\":\"feat/email-service\",\"confidence\":95,\"prompt\":\"User asked: fix N+1 in createRequest, Files.walk leak in LocalStorageAdapter, add integration tests for email-preview/remind-all/resend\"}"
+    },
+    {
+      "id": 474,
+      "change_id": "b4a1ad2e-f156-4260-b796-f0c51ea6c140",
+      "node_type": "action",
+      "title": "Fix N+1 in createRequest, stream leak in LocalStorageAdapter, add 3 integration tests",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-20T12:31:15.726338691+01:00",
+      "updated_at": "2026-02-20T12:31:15.726338691+01:00",
+      "metadata_json": "{\"branch\":\"feat/email-service\",\"confidence\":90}"
+    },
+    {
+      "id": 475,
+      "change_id": "774d802c-4033-4e63-b7aa-ee314d2b459f",
+      "node_type": "outcome",
+      "title": "Fixed: N+1→1 query, Files.walk stream leak (2 sites), +3 integration tests (25 pass). Committed 099dc04 and pushed.",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-20T12:36:13.866029754+01:00",
+      "updated_at": "2026-02-20T12:36:13.866029754+01:00",
+      "metadata_json": "{\"branch\":\"feat/email-service\",\"confidence\":95}"
+    },
+    {
+      "id": 476,
+      "change_id": "ff05c173-f9d5-452b-83b5-ee65913ab289",
+      "node_type": "goal",
+      "title": "Fix remaining low-priority PR #60 review items",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-20T14:19:57.288179979+01:00",
+      "updated_at": "2026-02-20T14:19:57.288179979+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":90}"
+    },
+    {
+      "id": 477,
+      "change_id": "b02ac8ca-2374-478c-9fd0-14fd1260a102",
+      "node_type": "action",
+      "title": "Remove dead overloads, fix sendBulkReminders partial-failure, switch SmtpEmailAdapter to MimeMessageHelper",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-20T14:20:02.370834112+01:00",
+      "updated_at": "2026-02-20T14:20:02.370834112+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"commit\":\"6830fab\",\"confidence\":95}"
+    },
+    {
+      "id": 478,
+      "change_id": "fc6c30da-08d7-4b80-b4e8-1507a9d8ba39",
+      "node_type": "outcome",
+      "title": "Commit 385fde1: 3 dead overloads removed, EmailDeliveryException caught per-recipient in sendBulkReminders, SimpleMailMessage replaced with MimeMessageHelper. 65 unit tests pass.",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-20T14:20:07.402470999+01:00",
+      "updated_at": "2026-02-20T14:20:07.402470999+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":95}"
+    },
+    {
+      "id": 479,
+      "change_id": "711d53e6-21d1-4aae-8b45-708b4c7e82ff",
+      "node_type": "goal",
+      "title": "Audit adapter pattern compliance and close stale issues",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-20T14:20:14.010073818+01:00",
+      "updated_at": "2026-02-20T14:20:14.010073818+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":90}"
+    },
+    {
+      "id": 480,
+      "change_id": "c81f1eed-7ac6-4267-b8a8-75f10fc52fd8",
+      "node_type": "outcome",
+      "title": "Adapter audit: email/KRS/storage fully adapted, PDF generation intentionally not wrapped. Closed stale issues #33,#34,#38,#39,#40 with references to resolving PRs. Progress report written to docs/progress/2026-02-20-cleanup-and-audit.md.",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-20T14:20:19.406852595+01:00",
+      "updated_at": "2026-02-20T14:20:19.406852595+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":95}"
     }
   ],
   "edges": [
@@ -9131,6 +9285,149 @@
       "weight": 1.0,
       "rationale": "Integration tests pushed to main",
       "created_at": "2026-02-19T12:31:47.869094177+01:00"
+    },
+    {
+      "id": 365,
+      "from_node_id": 440,
+      "to_node_id": 441,
+      "from_change_id": "4ca207e6-26d1-4ed3-a777-f09c416ed0b9",
+      "to_change_id": "8e6035de-72da-4123-8735-361cc98d7cc9",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Goal led to action for PR #14",
+      "created_at": "2026-02-19T20:21:33.517434786+01:00"
+    },
+    {
+      "id": 366,
+      "from_node_id": 441,
+      "to_node_id": 442,
+      "from_change_id": "8e6035de-72da-4123-8735-361cc98d7cc9",
+      "to_change_id": "afe06809-eb34-4ae0-bd62-7929791fcc5c",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Action resulted in PR #14 merged",
+      "created_at": "2026-02-19T20:21:33.529947668+01:00"
+    },
+    {
+      "id": 367,
+      "from_node_id": 443,
+      "to_node_id": 444,
+      "from_change_id": "fd0010c2-0b65-4892-9754-27116435c025",
+      "to_change_id": "50d3ae67-0058-4c3a-93c2-ff3267b7ca98",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Goal led to duplicate action for PR #14",
+      "created_at": "2026-02-19T20:21:33.542983975+01:00"
+    },
+    {
+      "id": 368,
+      "from_node_id": 467,
+      "to_node_id": 468,
+      "from_change_id": "4700004f-9561-4fdd-8ed4-b54cfb2cad17",
+      "to_change_id": "6868023b-abfa-4919-9daa-c0d0ed4306ed",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Goal led to adapter refactoring",
+      "created_at": "2026-02-19T20:21:49.199818480+01:00"
+    },
+    {
+      "id": 369,
+      "from_node_id": 468,
+      "to_node_id": 469,
+      "from_change_id": "6868023b-abfa-4919-9daa-c0d0ed4306ed",
+      "to_change_id": "7610773d-a00b-46b6-a872-e36eca46629e",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Refactoring completed successfully",
+      "created_at": "2026-02-19T20:21:49.213869132+01:00"
+    },
+    {
+      "id": 370,
+      "from_node_id": 470,
+      "to_node_id": 471,
+      "from_change_id": "6199a519-b50a-46ff-9060-961c1d7af3bf",
+      "to_change_id": "42d9412d-e02c-4eae-9eb3-e8875211eb79",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Goal led to implementation",
+      "created_at": "2026-02-19T21:08:43.414157100+01:00"
+    },
+    {
+      "id": 371,
+      "from_node_id": 471,
+      "to_node_id": 472,
+      "from_change_id": "42d9412d-e02c-4eae-9eb3-e8875211eb79",
+      "to_change_id": "c102900e-0b96-4a5a-98a7-ebf2a0a2a29d",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Implementation completed successfully",
+      "created_at": "2026-02-19T21:08:43.426598040+01:00"
+    },
+    {
+      "id": 372,
+      "from_node_id": 473,
+      "to_node_id": 474,
+      "from_change_id": "0d66163e-a3ae-44f3-9ef0-7c52914ff09f",
+      "to_change_id": "b4a1ad2e-f156-4260-b796-f0c51ea6c140",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": null,
+      "created_at": "2026-02-20T12:36:13.878177510+01:00"
+    },
+    {
+      "id": 373,
+      "from_node_id": 474,
+      "to_node_id": 475,
+      "from_change_id": "b4a1ad2e-f156-4260-b796-f0c51ea6c140",
+      "to_change_id": "774d802c-4033-4e63-b7aa-ee314d2b459f",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": null,
+      "created_at": "2026-02-20T12:36:13.891056085+01:00"
+    },
+    {
+      "id": 374,
+      "from_node_id": 476,
+      "to_node_id": 477,
+      "from_change_id": "ff05c173-f9d5-452b-83b5-ee65913ab289",
+      "to_change_id": "b02ac8ca-2374-478c-9fd0-14fd1260a102",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Implementation",
+      "created_at": "2026-02-20T14:20:25.555549894+01:00"
+    },
+    {
+      "id": 375,
+      "from_node_id": 477,
+      "to_node_id": 478,
+      "from_change_id": "b02ac8ca-2374-478c-9fd0-14fd1260a102",
+      "to_change_id": "fc6c30da-08d7-4b80-b4e8-1507a9d8ba39",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Result",
+      "created_at": "2026-02-20T14:20:25.567976981+01:00"
+    },
+    {
+      "id": 376,
+      "from_node_id": 473,
+      "to_node_id": 476,
+      "from_change_id": "0d66163e-a3ae-44f3-9ef0-7c52914ff09f",
+      "to_change_id": "ff05c173-f9d5-452b-83b5-ee65913ab289",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Follow-on low-priority items from same review",
+      "created_at": "2026-02-20T14:20:25.580145625+01:00"
+    },
+    {
+      "id": 377,
+      "from_node_id": 479,
+      "to_node_id": 480,
+      "from_change_id": "711d53e6-21d1-4aae-8b45-708b4c7e82ff",
+      "to_change_id": "c81f1eed-7ac6-4267-b8a8-75f10fc52fd8",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Result",
+      "created_at": "2026-02-20T14:20:25.592848035+01:00"
     }
   ]
 }

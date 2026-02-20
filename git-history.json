@@ -1,5 +1,13 @@
 [
   {
+    "hash": "6830fab3c1c9294346469047443f1d223af8ed28",
+    "short_hash": "6830fab",
+    "author": "Kris",
+    "date": "2026-02-20T13:25:49+01:00",
+    "message": "feat: email service, storage adapter pattern, and Office365 integration (#60)\n\n- Email adapter pattern: SmtpEmailAdapter (@prod), MockEmailAdapter (@dev/integration)\n- KRS adapter pattern: KrsApiAdapter (@prod), MockKrsAdapter (@dev/integration)\n- Office365StorageAdapter: full Graph SDK 6.x integration (small/large file upload, folder management)\n- LocalStorageAdapter: dev/integration mock with Files.walk resource leak fixed\n- New endpoints: email-preview, remind-all, resend magic link\n- N+1 query fix in createRequest (findAllById)\n- sendBulkReminders: per-recipient EmailDeliveryException catch (partial-failure safe)\n- SmtpEmailAdapter: switched to MimeMessageHelper (HTML-ready)\n- Dead overloads removed: sendRequest/sendReminder/sendBulkReminders no-arg delegates\n- Integration tests: 22 → 25 (email-preview, remind-all, resend covered)",
+    "files_changed": 37
+  },
+  {
     "hash": "015456deb4822cba20eb9cb9efa32c6592c8c757",
     "short_hash": "015456d",
     "author": "Krzysztof Krzemiński",
