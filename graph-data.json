@@ -5378,6 +5378,50 @@
       "created_at": "2026-02-21T16:10:30.071893187+01:00",
       "updated_at": "2026-02-21T16:10:30.071893187+01:00",
       "metadata_json": "{\"branch\":\"fix/visibility-rules-progress-31\",\"confidence\":95}"
+    },
+    {
+      "id": 490,
+      "change_id": "fc5fb633-9563-4975-b081-2ca68e9848d4",
+      "node_type": "goal",
+      "title": "Cache parsed Template.model JsonNode to avoid redundant JSON parsing on every request",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-21T22:49:37.914561684+01:00",
+      "updated_at": "2026-02-21T22:49:37.914561684+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":90,\"prompt\":\"User asked: deciduous add goal, add github issue, then commit and push, then implement feature (proposal 006-template-model-parse-cache)\"}"
+    },
+    {
+      "id": 491,
+      "change_id": "75dc5cab-6376-4f83-a679-eb7b7fd047e2",
+      "node_type": "action",
+      "title": "Implement Template model parse cache: CacheConfig, ParsedTemplateService, TemplateService eviction, migrate 5 services",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-21T22:52:02.616622584+01:00",
+      "updated_at": "2026-02-21T22:52:02.616622584+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":85}"
+    },
+    {
+      "id": 492,
+      "change_id": "3e0c81ac-cfca-41dc-9dd5-6503dfa613db",
+      "node_type": "outcome",
+      "title": "Template model parse cache implemented: CacheConfig + ParsedTemplateService + @CacheEvict in TemplateService; 9 parse sites across 5 services migrated; tests pass",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-21T23:18:21.733047520+01:00",
+      "updated_at": "2026-02-21T23:18:21.733047520+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":95}"
+    },
+    {
+      "id": 493,
+      "change_id": "8605e013-f55d-49f5-a324-bcb6efc2dbbd",
+      "node_type": "goal",
+      "title": "Analyse and propose Template model object model to replace raw JsonNode parsing",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-22T00:08:10.455725987+01:00",
+      "updated_at": "2026-02-22T00:08:10.455725987+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":90,\"prompt\":\"User asked: analyse idea of simplification Template entity model parsing by creating full object model of JSON tree\"}"
     }
   ],
   "edges": [
@@ -9593,6 +9637,28 @@
       "weight": 1.0,
       "rationale": "Outcome of fix",
       "created_at": "2026-02-21T16:10:35.888146888+01:00"
+    },
+    {
+      "id": 384,
+      "from_node_id": 490,
+      "to_node_id": 491,
+      "from_change_id": "fc5fb633-9563-4975-b081-2ca68e9848d4",
+      "to_change_id": "75dc5cab-6376-4f83-a679-eb7b7fd047e2",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Implementation of the caching goal",
+      "created_at": "2026-02-21T22:52:02.641188856+01:00"
+    },
+    {
+      "id": 385,
+      "from_node_id": 491,
+      "to_node_id": 492,
+      "from_change_id": "75dc5cab-6376-4f83-a679-eb7b7fd047e2",
+      "to_change_id": "3e0c81ac-cfca-41dc-9dd5-6503dfa613db",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Implementation completed successfully",
+      "created_at": "2026-02-21T23:18:46.107286897+01:00"
     }
   ]
 }
