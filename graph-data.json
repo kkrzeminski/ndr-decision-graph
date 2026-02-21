@@ -5279,6 +5279,105 @@
       "created_at": "2026-02-20T14:20:19.406852595+01:00",
       "updated_at": "2026-02-20T14:20:19.406852595+01:00",
       "metadata_json": "{\"branch\":\"main\",\"confidence\":95}"
+    },
+    {
+      "id": 481,
+      "change_id": "d0afd1ae-0fce-48da-9678-894df7d9b6a2",
+      "node_type": "goal",
+      "title": "Fix userId=1L TODOs in controllers",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-20T17:50:28.657979049+01:00",
+      "updated_at": "2026-02-20T17:50:28.657979049+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":95,\"prompt\":\"User asked: fix the controller TODOs\"}"
+    },
+    {
+      "id": 482,
+      "change_id": "202f9285-54e3-46aa-b056-213e1721abec",
+      "node_type": "action",
+      "title": "Replaced Principal+userId=1L with Authentication+userAccessService in ApplicationController and FileAttachmentController",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-20T17:50:28.672694618+01:00",
+      "updated_at": "2026-02-20T17:50:28.672694618+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":95}"
+    },
+    {
+      "id": 483,
+      "change_id": "3fd9eb35-631b-41ad-9e05-0aac81a13940",
+      "node_type": "outcome",
+      "title": "8 TODOs resolved, 295 integration tests pass, committed 7954749 and pushed",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-20T17:50:28.687148576+01:00",
+      "updated_at": "2026-02-20T17:50:28.687148576+01:00",
+      "metadata_json": "{\"branch\":\"main\",\"confidence\":95}"
+    },
+    {
+      "id": 484,
+      "change_id": "06d864f7-1522-4d73-ba25-36eb9f8ccca0",
+      "node_type": "goal",
+      "title": "Fix global progress calculation (issue #28)",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-20T18:17:05.936502636+01:00",
+      "updated_at": "2026-02-20T18:17:05.936502636+01:00",
+      "metadata_json": "{\"branch\":\"fix/global-progress-28\",\"confidence\":90,\"prompt\":\"User asked: work on #28 but start within new branch\"}"
+    },
+    {
+      "id": 485,
+      "change_id": "208b75ee-c07a-4b11-b477-4f36d50178e1",
+      "node_type": "action",
+      "title": "Diagnose root cause of global progress bug",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-21T08:59:50.333391308+01:00",
+      "updated_at": "2026-02-21T08:59:50.333391308+01:00",
+      "metadata_json": "{\"branch\":\"fix/global-progress-28\",\"confidence\":95}"
+    },
+    {
+      "id": 486,
+      "change_id": "b372612c-94fb-4e71-a3a9-b180c84e3b01",
+      "node_type": "action",
+      "title": "Fix recalculateProjectProgress to include untouched tabs from template",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-21T09:00:37.026858381+01:00",
+      "updated_at": "2026-02-21T09:00:37.026858381+01:00",
+      "metadata_json": "{\"branch\":\"fix/global-progress-28\",\"confidence\":90}"
+    },
+    {
+      "id": 487,
+      "change_id": "87d6c805-c1d9-4cc8-b7e4-daf99e4dcf78",
+      "node_type": "goal",
+      "title": "Fix visibility rules progress bug (issue #31)",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-21T16:10:30.039126122+01:00",
+      "updated_at": "2026-02-21T16:10:30.039126122+01:00",
+      "metadata_json": "{\"branch\":\"fix/visibility-rules-progress-31\",\"confidence\":95,\"prompt\":\"User asked: merge into master then start on issue #31\"}"
+    },
+    {
+      "id": 488,
+      "change_id": "c603c542-b739-476b-8619-37c337cea349",
+      "node_type": "action",
+      "title": "Add tabHasVisibilityRules guard + recalculate in setValue",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-21T16:10:30.057434364+01:00",
+      "updated_at": "2026-02-21T16:10:30.057434364+01:00",
+      "metadata_json": "{\"branch\":\"fix/visibility-rules-progress-31\",\"confidence\":95}"
+    },
+    {
+      "id": 489,
+      "change_id": "1696cee7-e32b-4f3f-8df9-069eb9c297f8",
+      "node_type": "outcome",
+      "title": "Commit 561c24a: tabHasVisibilityRules guard, recalculate on setValue, regression test passes. Build 21m (no regression). PR #64 open.",
+      "description": null,
+      "status": "pending",
+      "created_at": "2026-02-21T16:10:30.071893187+01:00",
+      "updated_at": "2026-02-21T16:10:30.071893187+01:00",
+      "metadata_json": "{\"branch\":\"fix/visibility-rules-progress-31\",\"confidence\":95}"
     }
   ],
   "edges": [
@@ -9428,6 +9527,72 @@
       "weight": 1.0,
       "rationale": "Result",
       "created_at": "2026-02-20T14:20:25.592848035+01:00"
+    },
+    {
+      "id": 378,
+      "from_node_id": 481,
+      "to_node_id": 482,
+      "from_change_id": "d0afd1ae-0fce-48da-9678-894df7d9b6a2",
+      "to_change_id": "202f9285-54e3-46aa-b056-213e1721abec",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Action implements goal",
+      "created_at": "2026-02-20T17:50:32.319316725+01:00"
+    },
+    {
+      "id": 379,
+      "from_node_id": 482,
+      "to_node_id": 483,
+      "from_change_id": "202f9285-54e3-46aa-b056-213e1721abec",
+      "to_change_id": "3fd9eb35-631b-41ad-9e05-0aac81a13940",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Outcome of action",
+      "created_at": "2026-02-20T17:50:32.334950580+01:00"
+    },
+    {
+      "id": 380,
+      "from_node_id": 484,
+      "to_node_id": 485,
+      "from_change_id": "06d864f7-1522-4d73-ba25-36eb9f8ccca0",
+      "to_change_id": "208b75ee-c07a-4b11-b477-4f36d50178e1",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Action implements goal",
+      "created_at": "2026-02-21T08:59:50.349447522+01:00"
+    },
+    {
+      "id": 381,
+      "from_node_id": 485,
+      "to_node_id": 486,
+      "from_change_id": "208b75ee-c07a-4b11-b477-4f36d50178e1",
+      "to_change_id": "b372612c-94fb-4e71-a3a9-b180c84e3b01",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Fix follows diagnosis",
+      "created_at": "2026-02-21T09:00:37.041425254+01:00"
+    },
+    {
+      "id": 382,
+      "from_node_id": 487,
+      "to_node_id": 488,
+      "from_change_id": "87d6c805-c1d9-4cc8-b7e4-daf99e4dcf78",
+      "to_change_id": "c603c542-b739-476b-8619-37c337cea349",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Action to fix #31",
+      "created_at": "2026-02-21T16:10:35.874430821+01:00"
+    },
+    {
+      "id": 383,
+      "from_node_id": 488,
+      "to_node_id": 489,
+      "from_change_id": "c603c542-b739-476b-8619-37c337cea349",
+      "to_change_id": "1696cee7-e32b-4f3f-8df9-069eb9c297f8",
+      "edge_type": "leads_to",
+      "weight": 1.0,
+      "rationale": "Outcome of fix",
+      "created_at": "2026-02-21T16:10:35.888146888+01:00"
     }
   ]
 }
